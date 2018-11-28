@@ -48,7 +48,7 @@
               "vendorChunk": false,
               "buildOptimizer": true,
               "baseHref": "./",
-              "deployUrl": "https://ngfelixl.github.io/lib-documentations"
+              "deployUrl": "https://ngfelixl.github.io/lib-documentations/"
             }
           }
         },
