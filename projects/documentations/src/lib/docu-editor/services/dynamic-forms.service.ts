@@ -4,7 +4,14 @@ import { Section } from '../../models';
 import { Code, Text } from '../../models/section-types';
 
 @Injectable()
-export class FormGroupCreateService {
+export class DynamicFormsService {
+  documentation(): FormGroup {
+    return new FormGroup({
+      title: new FormControl(),
+      sections: new FormArray([])
+    });
+  }
+
   code(item: Section): FormGroup {
     return new FormGroup({
       type: new FormControl(item.type),

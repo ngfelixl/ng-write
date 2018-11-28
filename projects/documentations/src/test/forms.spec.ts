@@ -12,7 +12,7 @@ import { TableFormComponent } from '../lib/docu-editor/components/table-form.com
 import { AccordionFormComponent } from '../lib/docu-editor/components/accordion-form.component';
 import { TabsFormComponent } from '../lib/docu-editor/components/tabs-form.component';
 import { FormHeaderComponent } from '../lib/docu-editor/components/form-header.component';
-import { FormGroupCreateService } from '../lib/docu-editor/services/form-group-create.service';
+import { DynamicFormsService } from '../lib/docu-editor/services/dynamic-forms.service';
 import { EditorComponent } from '../lib/docu-editor/components/editor.component';
 import { By } from '@angular/platform-browser';
 
@@ -32,7 +32,7 @@ beforeEach(async(() => {
       TabsFormComponent
     ],
     providers: [
-      FormGroupCreateService
+      DynamicFormsService
     ]
   });
 }));

@@ -6,7 +6,7 @@ import { components } from './components/index';
 import { MaterialModule } from './material.module';
 import { SharedModule } from '../shared/shared.module';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { FormGroupCreateService } from './services/form-group-create.service';
+import { DynamicFormsService } from './services/dynamic-forms.service';
 import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 
 @NgModule({
@@ -22,7 +22,7 @@ import { ScrollDispatchModule } from '@angular/cdk/scrolling';
     components
   ],
   providers: [
-    FormGroupCreateService
+    DynamicFormsService
   ],
   exports: [
     components

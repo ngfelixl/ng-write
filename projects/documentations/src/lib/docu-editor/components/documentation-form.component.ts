@@ -2,7 +2,7 @@ import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core
 import { FormGroup, FormArray } from '@angular/forms';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
 import { Documentation, Section } from '../../models';
-import { FormGroupCreateService } from '../services/form-group-create.service';
+import { DynamicFormsService } from '../services/dynamic-forms.service';
 
 @Component({
   selector: 'docu-documentation-form',
@@ -45,7 +45,7 @@ export class DocumentationFormComponent implements OnInit {
   @Input() form: FormGroup;
   @Input() documentation: Documentation;
 
-  constructor(private formGroupCreate: FormGroupCreateService) {}
+  constructor(private dynamicForms: DynamicFormsService) {}
 
   ngOnInit() {
     if (this.documentation) {
@@ -89,15 +89,15 @@ export class DocumentationFormComponent implements OnInit {
     if (item) {
       let formGroup: FormGroup;
       switch (item.type) {
-        case 'code': formGroup = this.formGroupCreate.code(item); break;
-        case 'tabs': formGroup = this.formGroupCreate.tabs(item); break;
-        case 'accordion': formGroup = this.formGroupCreate.tabs(item); break;
-        default: formGroup = this.formGroupCreate.default(item);
+        case 'code': formGroup = this.dynamicForms.code(item); break;
+        case 'tabs': formGroup = this.dynamicForms.tabs(item); break;
+        case 'accordion': formGroup = this.dynamicForms.tabs(item); break;
+        default: formGroup = this.dynamicForms.default(item);
       }
       formGroup.patchValue(item);
       return formGroup;
     } else {
-      return this.formGroupCreate.default();
+      return this.dynamicForms.default();
     }
   }
 
