@@ -386,7 +386,7 @@ MIT
 
 @angular/material/form-field
 
-ng-docu
+documentations
 
 @angular/material/select
 

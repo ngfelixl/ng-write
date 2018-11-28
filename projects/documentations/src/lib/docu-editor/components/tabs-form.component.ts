@@ -1,6 +1,7 @@
 import { Component, Input, ChangeDetectionStrategy, OnInit } from '@angular/core';
-import { FormGroup, FormArray, FormControl } from '@angular/forms';
+import { FormGroup, FormArray } from '@angular/forms';
 import { Documentation } from '../../models';
+import { DynamicFormsService } from '../services/dynamic-forms.service';
 
 @Component({
   selector: 'docu-tabs-form',
@@ -27,6 +28,8 @@ export class TabsFormComponent implements OnInit {
   @Input() form: FormGroup;
   @Input() documentations: Documentation[] = [];
 
+  constructor(private dynamicForms: DynamicFormsService) {}
+
   ngOnInit() {
     if (this.documentations) {
       this.adjustTabs();
@@ -36,7 +39,7 @@ export class TabsFormComponent implements OnInit {
   get documentationsForm() { return this.form.get('documentations') as FormArray; }
 
   addTab(title: string) {
-    const documentation = this.createSubDocumentation();
+    const documentation = this.dynamicForms.documentation();
     documentation.patchValue({title: title});
     if (!this.documentations) {
       this.documentations = [];
@@ -45,19 +48,12 @@ export class TabsFormComponent implements OnInit {
     this.documentationsForm.push(documentation);
   }
 
-  createSubDocumentation(): FormGroup {
-    return new FormGroup({
-      title: new FormControl(),
-      sections: new FormArray([])
-    });
-  }
-
 
   adjustTabs() {
     this.documentationsForm.reset();
     if (this.documentations.length > 0) {
       for (const docu of this.documentations) {
-        const item = this.createSubDocumentation();
+        const item = this.dynamicForms.documentation();
         item.patchValue(docu);
         this.documentationsForm.push(item);
       }

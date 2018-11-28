@@ -3,7 +3,7 @@ import { DocumentationArray } from './Documentation';
 
 export interface Section {
   type: string;
-  content:
+  content?:
     Text |
     Code |
     DocumentationArray |

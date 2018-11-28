@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormControl, FormArray } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { Documentation } from '../../models';
+import { DynamicFormsService } from '../services/dynamic-forms.service';
 
 @Component({
   selector: 'docu-editor',
@@ -17,10 +18,7 @@ export class EditorComponent {
   @Input() documentation: Documentation;
   @Output() save = new EventEmitter<Documentation>();
 
-  constructor() {
-    this.form = new FormGroup({
-      title: new FormControl(null),
-      sections: new FormArray([])
-    });
+  constructor(private dynamicForms: DynamicFormsService) {
+    this.form = this.dynamicForms.documentation();
   }
 }

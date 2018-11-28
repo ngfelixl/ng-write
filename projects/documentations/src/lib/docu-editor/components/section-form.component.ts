@@ -3,6 +3,7 @@ import { FormGroup, FormControl, FormArray } from '@angular/forms';
 import { Section, Documentation, DocumentationArray } from '../../models';
 import { Subscription } from 'rxjs';
 import { Table } from '../../models/section-types';
+import { DynamicFormsService } from '../services/dynamic-forms.service';
 
 
 @Component({
@@ -56,6 +57,8 @@ export class SectionFormComponent implements OnInit, OnDestroy {
   type: string;
   subscription: Subscription;
 
+  constructor(private dynamicForms: DynamicFormsService) {}
+
   get content(): FormGroup { return this.sectionForm && this.sectionForm.get('content') as FormGroup; }
   get typeControl(): FormControl { return this.sectionForm && this.sectionForm.get('type') as FormControl; }
   get documentations(): Documentation[] { return this.section ? (<DocumentationArray>this.section.content).documentations : []; }
@@ -100,10 +103,7 @@ export class SectionFormComponent implements OnInit, OnDestroy {
       });
       this.type = this.typeControl.value;
     } else {
-      this.sectionForm = new FormGroup({
-        type: new FormControl('text'),
-        content: new FormControl()
-      });
+      this.sectionForm = this.dynamicForms.default({ type: 'text' });
     }
   }
 

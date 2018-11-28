@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormGroup } from '@angular/forms';
 import { Documentation } from '../../models';
+import { DynamicFormsService } from '../services/dynamic-forms.service';
 
 @Component({
   selector: 'docu-accordion-form',
@@ -31,6 +32,8 @@ export class AccordionFormComponent implements OnInit {
   @Input() form: FormGroup;
   @Input() documentations: Documentation[] = [];
 
+  constructor(private dynamicForms: DynamicFormsService) {}
+
   ngOnInit() {
     if (this.documentations) {
       this.adjustPanels();
@@ -40,7 +43,7 @@ export class AccordionFormComponent implements OnInit {
   get documentationsForm() { return this.form.get('documentations') as FormArray; }
 
   addPanel(title: string) {
-    const documentation = this.createSubDocumentation();
+    const documentation = this.dynamicForms.documentation();
     documentation.patchValue({title: title});
     if (!this.documentations) {
       this.documentations = [];
@@ -49,19 +52,12 @@ export class AccordionFormComponent implements OnInit {
     this.documentationsForm.push(documentation);
   }
 
-  createSubDocumentation(): FormGroup {
-    return new FormGroup({
-      title: new FormControl(),
-      sections: new FormArray([])
-    });
-  }
-
 
   adjustPanels() {
     this.documentationsForm.reset();
     if (this.documentations.length > 0) {
       for (const docu of this.documentations) {
-        const item = this.createSubDocumentation();
+        const item = this.dynamicForms.documentation();
         item.patchValue(docu);
         this.documentationsForm.push(item);
       }
