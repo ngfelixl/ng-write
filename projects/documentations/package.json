@@ -1,6 +1,6 @@
 {
   "name": "documentations",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Felix Lemke",
     "email": "flemke.dev@gmail.com",
@@ -12,7 +12,11 @@
     "documentations",
     "library",
     "code",
-    "math"
+    "math",
+    "tables",
+    "tabs",
+    "accordion",
+    "syntaxhighlighting"
   ],
   "peerDependencies": {
     "@angular/common": "^7.1.0",
