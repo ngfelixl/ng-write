@@ -41,7 +41,11 @@ import { Table } from '../../models/section-types';
     .card-content { display: flex; flex-wrap: wrap; }
     .card-content > * { flex: 1 0 250px; }
     mat-card { box-sizing: border-box; width: 100%; margin: 4px; }
-    .section-form { width: 100%; background-color: rgba(0, 0, 0, 0.1); padding: 4px; box-sizing: border-box; border-radius: 4px; overflow: auto; }
+    .section-form {
+      width: 100%; background-color: rgba(0, 0, 0, 0.1);
+      padding: 4px; box-sizing: border-box; border-radius: 4px;
+      overflow: auto;
+    }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -52,51 +56,61 @@ export class SectionFormComponent implements OnInit, OnDestroy {
   type: string;
   subscription: Subscription;
 
-  get content(): FormGroup { return this.sectionForm.get('content') as FormGroup; }
+  get content(): FormGroup { return this.sectionForm && this.sectionForm.get('content') as FormGroup; }
+  get typeControl(): FormControl { return this.sectionForm && this.sectionForm.get('type') as FormControl; }
   get documentations(): Documentation[] { return this.section ? (<DocumentationArray>this.section.content).documentations : []; }
 
   ngOnInit() {
-    this.subscription = this.sectionForm.get('type').valueChanges.subscribe(type => {
-      const temp = this.type;
-      this.type = null;
-      switch (temp) {
-        case 'code':
-          this.content.removeControl('language');
-          this.content.removeControl('code');
-          break;
-        case 'tabs':
-        case 'accordion':
-          this.content.removeControl('documentations');
-          break;
-        case 'table':
-          this.content.removeControl('table');
-          break;
-        default:
-          this.content.removeControl('text');
-      }
+    if (this.typeControl) {
+      this.subscription = this.typeControl.valueChanges.subscribe(type => {
+        const temp = this.type;
+        this.type = null;
+        switch (temp) {
+          case 'code':
+            this.content.removeControl('language');
+            this.content.removeControl('code');
+            break;
+          case 'tabs':
+          case 'accordion':
+            this.content.removeControl('documentations');
+            break;
+          case 'table':
+            this.content.removeControl('table');
+            break;
+          default:
+            this.content.removeControl('text');
+        }
 
-      switch (type) {
-        case 'code':
-          this.content.addControl('language', new FormControl(null));
-          this.content.addControl('code', new FormControl(''));
-          break;
-        case 'tabs':
-        case 'accordion':
-          this.content.addControl('documentations', new FormArray([]));
-          break;
-        case 'table':
-          this.content.addControl('table', new FormGroup({}));
-          break;
-        default:
-          this.content.addControl('text', new FormControl());
-      }
-      this.type = type;
-    });
-    this.type = this.sectionForm.get('type').value;
+        switch (type) {
+          case 'code':
+            this.content.addControl('language', new FormControl(null));
+            this.content.addControl('code', new FormControl(''));
+            break;
+          case 'tabs':
+          case 'accordion':
+            this.content.addControl('documentations', new FormArray([]));
+            break;
+          case 'table':
+            this.content.addControl('table', new FormGroup({}));
+            break;
+          default:
+            this.content.addControl('text', new FormControl());
+        }
+        this.type = type;
+      });
+      this.type = this.typeControl.value;
+    } else {
+      this.sectionForm = new FormGroup({
+        type: new FormControl('text'),
+        content: new FormControl()
+      });
+    }
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 
   isSimple(type: string): boolean {

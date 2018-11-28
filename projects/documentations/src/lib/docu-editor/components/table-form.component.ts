@@ -9,8 +9,8 @@ import { Table } from '../../models/section-types';
       <tbody>
         <tr>
           <td></td>
-          <td *ngFor="let control of tableRows?.at(0).get('cols').controls; let i = index">
-            <button type="button" (click)="removeCol(i)">-</button>
+          <td *ngFor="let col of cols">
+            <button type="button" (click)="removeCol(col)">-</button>
           </td>
           <td><button type="button" (click)="addCol()">+</button></td>
         </tr>
@@ -43,6 +43,7 @@ export class TableFormComponent implements OnInit {
   }
   get numRows(): number { return this.tableRows.length; }
   get numCols(): number { return this.numRows > 0 ? (<FormArray>this.tableRows.at(0).get('cols')).length : 0; }
+  get cols(): number[] { return Array(this.numCols).map((o, i) => i); }
 
   ngOnInit() {
     this.patchTable();
