@@ -1,0 +1,22 @@
+{
+  "name": "ng-docu",
+  "version": "0.2.0",
+  "author": {
+    "name": "Felix Lemke",
+    "email": "flemke.dev@gmail.com",
+    "url": "https://felixlemke.com"
+  },
+  "description": "Angular helpers for easily writing interactive articles",
+  "keywords": [
+    "angular",
+    "documentation",
+    "code",
+    "math"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^7.0.0",
+    "@angular/core": "^7.0.0",
+    "@angular/material": "^7.0.0",
+    "katex": "^0.10.0"
+  }
+}
