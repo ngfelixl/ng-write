@@ -8,5 +8,5 @@ export interface Text {
 }
 
 export interface Table {
-  rows: string[][];
+  rows: { cols: string[]; }[];
 }

@@ -52,11 +52,11 @@ export class TableFormComponent implements OnInit {
   patchTable() {
     this.form.setControl('rows', new FormArray([]));
     if (!this.table) {
-      this.table = { rows: [['']] };
+      this.table = { rows: [{ cols: [''] }] };
     }
     for (let i = 0; i < this.table.rows.length; i++) {
       const row = this.table.rows[i];
-      this.tableRows.push(new FormGroup({ cols: new FormArray(this.createControlsArray(row)) } ));
+      this.tableRows.push(new FormGroup({ cols: new FormArray(this.createControlsArray(row.cols)) } ));
     }
   }
 
