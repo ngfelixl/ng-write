@@ -1,10 +1,10 @@
 # ng-docu
 
-[![Build Status](https://travis-ci.org/ngfelixl/ng-documentations.svg?branch=master)](https://travis-ci.org/ngfelixl/ng-documentations)
+[![Build Status](https://travis-ci.org/ngfelixl/lib-documentations.svg?branch=master)](https://travis-ci.org/ngfelixl/lib-documentations)
 
-Documentation helper Angular components for writing documentations and articles. See this library in action [here](https://ngfelixl.github.io/ng-documentations).
+Documentation helper Angular components for writing documentations and articles. See this library in action [here](https://ngfelixl.github.io/lib-documentations).
 
-[![See animation on github](https://github.com/ngfelixl/ng-documentations/blob/master/projects/documentations/img/animation_docu.gif)](https://github.com/ngfelixl/ng-documentations/blob/master/projects/documentations/img/animation_docu.gif)
+[![See animation on github](https://github.com/ngfelixl/lib-documentations/blob/master/projects/documentations/img/animation_docu.gif)](https://github.com/ngfelixl/lib-documentations/blob/master/projects/documentations/img/animation_docu.gif)
 
 ## Installation
 
