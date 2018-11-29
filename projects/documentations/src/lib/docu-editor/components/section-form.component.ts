@@ -61,7 +61,9 @@ export class SectionFormComponent implements OnInit, OnDestroy {
 
   get content(): FormGroup { return this.sectionForm && this.sectionForm.get('content') as FormGroup; }
   get typeControl(): FormControl { return this.sectionForm && this.sectionForm.get('type') as FormControl; }
-  get documentations(): Documentation[] { return this.section ? (<DocumentationArray>this.section.content).documentations : []; }
+  get documentations(): Documentation[] {
+    return this.section && this.section.content ? (<DocumentationArray>this.section.content).documentations : [];
+  }
 
   ngOnInit() {
     if (this.typeControl) {

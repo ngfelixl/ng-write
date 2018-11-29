@@ -12,7 +12,7 @@ import { DynamicFormsService } from '../services/dynamic-forms.service';
           <mat-expansion-panel-header>
             <mat-panel-title>{{documentationForm.value.title}}</mat-panel-title>
           </mat-expansion-panel-header>
-          <docu-documentation-form [form]="documentationForm" [documentation]="documentations[i]"></docu-documentation-form>
+          <docu-documentation-form [form]="documentationForm" [documentation]="getDocumentation(i)"></docu-documentation-form>
         </mat-expansion-panel>
 
         <mat-expansion-panel>
@@ -41,10 +41,13 @@ export class AccordionFormComponent implements OnInit {
   }
 
   get documentationsForm() { return this.form.get('documentations') as FormArray; }
+  getDocumentation(index) {
+    return this.documentations && this.documentations[index] ? this.documentations[index] : null;
+  }
 
   addPanel(title: string) {
     const documentation = this.dynamicForms.documentation();
-    documentation.patchValue({title: title});
+    documentation.patchValue({title: title, sections: []});
     if (!this.documentations) {
       this.documentations = [];
     }

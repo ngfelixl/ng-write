@@ -10,7 +10,8 @@ import { DynamicFormsService } from '../services/dynamic-forms.service';
       <mat-tab-group formArrayName="documentations">
         <mat-tab *ngFor="let documentationForm of documentationsForm?.controls; let i = index">
           <ng-template mat-tab-label>{{documentationForm.value.title}}</ng-template>
-          <docu-documentation-form [form]="documentationForm" [documentation]="documentations[i]"></docu-documentation-form>
+          <docu-documentation-form [form]="documentationForm" [documentation]="getDocumentation(i)">
+          </docu-documentation-form>
         </mat-tab>
         <mat-tab label="+ Add" (click)="addTab($event)">
           <mat-form-field>
@@ -37,10 +38,13 @@ export class TabsFormComponent implements OnInit {
   }
 
   get documentationsForm() { return this.form.get('documentations') as FormArray; }
+  getDocumentation(index) {
+    return this.documentations && this.documentations[index] ? this.documentations[index] : null;
+  }
 
   addTab(title: string) {
     const documentation = this.dynamicForms.documentation();
-    documentation.patchValue({title: title});
+    documentation.patchValue({title: title, sections: [] });
     if (!this.documentations) {
       this.documentations = [];
     }
