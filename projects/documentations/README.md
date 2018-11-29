@@ -1,4 +1,4 @@
-# ng-docu
+# documentations - the Angular article library
 
 [![Build Status](https://travis-ci.org/ngfelixl/lib-documentations.svg?branch=master)](https://travis-ci.org/ngfelixl/lib-documentations)
 
