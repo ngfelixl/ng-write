@@ -12,6 +12,7 @@ import { ContainerComponent } from '../lib/shared/components/container.component
 import { MathComponent } from '../lib/shared/components/math.component';
 import { TabsComponent } from '../lib/shared/components/tabs.component';
 import { MaterialModule } from '../lib/shared/material.module';
+import { TableComponent } from '../lib/shared/components/table.component';
 
 beforeEach(async(() => {
   TestBed.configureTestingModule({
@@ -29,7 +30,8 @@ beforeEach(async(() => {
       TitleComponent,
       SyntaxPipe,
       TabsComponent,
-      TextPipe
+      TextPipe,
+      TableComponent
     ]
   });
 }));
