@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatTabsModule, MatToolbarModule } from '@angular/material';
 
-import { DocuModule, DocuEditorModule } from 'documentations';
+import { DocuModule, DocuEditorModule } from '../../projects/documentations/src/public_api';
 
 @NgModule({
   declarations: [

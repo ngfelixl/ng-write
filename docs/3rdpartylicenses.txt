@@ -384,19 +384,19 @@ MIT
 @angular/forms
 MIT
 
-documentations
-
-@angular/material/expansion
-
-@angular/material/card
-
 @angular/material/form-field
 
-@angular/material/button
+documentations
 
 @angular/material/select
 
 @angular/material/core
+
+@angular/material/button
+
+@angular/material/expansion
+
+@angular/material/card
 
 @angular/material/icon
 
