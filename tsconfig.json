@@ -17,11 +17,11 @@
       "dom"
     ],
     "paths": {
-      "testlib": [
-        "dist/testlib"
+      "documentations": [
+        "dist/documentations"
       ],
-      "testlib/*": [
-        "dist/testlib/*"
+      "documentations/*": [
+        "dist/documentations/*"
       ]
     }
   }
