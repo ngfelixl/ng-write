@@ -11,17 +11,17 @@ import { DynamicFormsService } from '../services/dynamic-forms.service';
   template: `
     <mat-card>
       <mat-card-content>
-        <div class="card-content">
-          <div [formGroup]="sectionForm" class="form">
-            <docu-form-header [form]="sectionForm" (action)="action.emit($event)"><ng-content></ng-content></docu-form-header>
-            <div class="section-form">
-              <docu-simple-form *ngIf="isSimple(type)" [form]="content"></docu-simple-form>
-              <docu-code-form *ngIf="type === 'code'" [form]="content"></docu-code-form>
-              <docu-tabs-form *ngIf="type === 'tabs'" [form]="content" [documentations]="documentations"></docu-tabs-form>
-              <docu-accordion-form *ngIf="type === 'accordion'" [form]="content" [documentations]="documentations"></docu-accordion-form>
-              <docu-table-form *ngIf="type === 'table'" [form]="content" [table]="section?.content"></docu-table-form>
-            </div>
+        <div [formGroup]="sectionForm" class="form">
+          <docu-form-header [form]="sectionForm" (action)="action.emit($event)"><ng-content></ng-content></docu-form-header>
+          <div class="section-form">
+            <docu-simple-form *ngIf="isSimple(type)" [form]="content"></docu-simple-form>
+            <docu-code-form *ngIf="type === 'code'" [form]="content"></docu-code-form>
+            <docu-tabs-form *ngIf="type === 'tabs'" [form]="content" [documentations]="documentations"></docu-tabs-form>
+            <docu-accordion-form *ngIf="type === 'accordion'" [form]="content" [documentations]="documentations"></docu-accordion-form>
+            <docu-table-form *ngIf="type === 'table'" [form]="content" [table]="section?.content"></docu-table-form>
           </div>
+        </div>
+        <div class="preview">
           <docu-section [section]="sectionForm.value"></docu-section>
         </div>
       </mat-card-content>
@@ -38,9 +38,9 @@ import { DynamicFormsService } from '../services/dynamic-forms.service';
       justify-content: space-between;
       box-sizing: border-box;
     }
-    .form { width: 100%; overflow: auto; }
-    .card-content { display: flex; flex-wrap: wrap; }
-    .card-content > * { flex: 1 0 250px; }
+    mat-card-content { display: flex; flex-wrap: wrap; }
+    mat-card-content > .form { flex: 1 1 320px; min-width: 320px; }
+    mat-card-content > .preview { flex: 1 1 320px; min-width: 320px; }
     mat-card { box-sizing: border-box; width: 100%; margin: 4px; }
     .section-form {
       width: 100%; background-color: rgba(0, 0, 0, 0.1);

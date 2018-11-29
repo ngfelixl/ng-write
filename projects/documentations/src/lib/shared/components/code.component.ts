@@ -6,18 +6,24 @@ import { Code } from '../../models/section-types';
   template: `
     <mat-card>
       <mat-card-content>
-        <div [innerHTML]="code?.code | syntaxPipe:code?.language"></div>
+        <div class="code" [innerHTML]="code?.code | syntaxPipe:code?.language"></div>
       </mat-card-content>
     </mat-card>
   `,
   styles: [`
-    :host, mat-card, mat-card-content { width: 100%; box-sizing: border-box; }
-    div {
-      font-family: 'Source Code Pro', monospace, roboto, sans-serif;
+    :host, mat-card, mat-card-content, .code {
+      width: 100%;
       box-sizing: border-box;
+    }
+    mat-card {
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    .code {
+      font-family: 'Source Code Pro', monospace, roboto, sans-serif;
       padding: 16px;
       white-space: pre;
-      overflow: auto;
+      overflow-x: auto;
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
