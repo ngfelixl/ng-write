@@ -10,11 +10,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
     <docu-math *ngIf="section?.type === 'math'" [math]="section?.content?.text"></docu-math>
     <docu-tabs *ngIf="section?.type === 'tabs'" [tabs]="section?.content?.documentations"></docu-tabs>
     <docu-accordion *ngIf="section?.type === 'accordion'" [panels]="section?.content?.documentations"></docu-accordion>
-
-    <!--
-      <app-image *ngIf="paragraph?.type === 'image'" [url]="paragraph?.content"></app-image>
-      <app-tree *ngIf="paragraph?.type === 'tree'" [tree]="paragraph?.content"></app-tree>
-    -->
+    <docu-table *ngIf="section?.type === 'table'" [table]="section?.content"></docu-table>
   `,
   styles: [`
     :host { display: block; margin: 0 auto; max-width: 1280px; padding: 16px; box-sizing: border-box; z-index: 1; }

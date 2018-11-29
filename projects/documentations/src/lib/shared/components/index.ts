@@ -7,6 +7,7 @@ import { MathComponent } from './math.component';
 import { TabsComponent } from './tabs.component';
 import { ContainerComponent } from './container.component';
 import { AccordionComponent } from './accordion.component';
+import { TableComponent } from './table.component';
 
 export const components: any[] = [
   AccordionComponent,
@@ -15,6 +16,7 @@ export const components: any[] = [
   CitationComponent,
   MathComponent,
   SectionComponent,
+  TableComponent,
   TabsComponent,
   TextComponent,
   TitleComponent
