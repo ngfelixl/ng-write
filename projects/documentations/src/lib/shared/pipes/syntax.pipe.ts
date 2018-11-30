@@ -10,6 +10,7 @@ export class SyntaxPipe implements PipeTransform {
   transform(code: string, language?: string) {
     const lang = syntaxRules.find(o => o.lang === language);
     if (lang && code) {
+      code = escapeHtml(code);
 
       // Keywords
       for (const rule of Object.entries(lang.keywords)) {
@@ -33,7 +34,7 @@ export class SyntaxPipe implements PipeTransform {
 
       if (language === 'html') {
         const tagsRegexp = new RegExp(/(&lt;\/?[a-zA-Z]+\ ?.*&gt;)/g);
-        code = code.replace(tagsRegexp, `\<span style="color: #ff0000"\>$&\<\/span\>`);
+        code = code.replace(tagsRegexp, `\<span style="color: #0000bb"\>$&\<\/span\>`);
       }
 
       return this.sanitizer.bypassSecurityTrustHtml(code);
@@ -43,12 +44,12 @@ export class SyntaxPipe implements PipeTransform {
   }
 }
 
-/* function escapeHtml(unsafe) {
+function escapeHtml(unsafe) {
   return unsafe
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
-} */
+}
 

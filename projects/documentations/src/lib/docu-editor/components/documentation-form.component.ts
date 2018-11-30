@@ -21,6 +21,7 @@ import { DynamicFormsService } from '../services/dynamic-forms.service';
             </button>
           </docu-section-form>
       </div>
+      <button mat-raised-button type="button" color="accent" (click)="addEnd()" class="add-button">Add section</button>
     </div>`,
   styles: [`
     .cdk-drag-placeholder { opacity: 0; }
@@ -38,6 +39,7 @@ import { DynamicFormsService } from '../services/dynamic-forms.service';
       transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
     }
     .drag-handle { cursor: move; }
+    .add-button { margin: 4px; }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
