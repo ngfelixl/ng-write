@@ -1,6 +1,7 @@
 export interface Code {
   language: string;
   code: string;
+  caption?: string;
 }
 
 export interface Text {
@@ -13,6 +14,6 @@ export interface Table {
 
 export interface Image {
   imageUrl?: string;
-  textwidth: number;
-  caption: string;
+  textwidth?: number;
+  caption?: string;
 }

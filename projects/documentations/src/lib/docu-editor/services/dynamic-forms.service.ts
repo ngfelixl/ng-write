@@ -41,14 +41,22 @@ export class DynamicFormsService {
   public documentation(): FormGroup {
     return new FormGroup({
       title: new FormControl(),
-      sections: new FormArray([])
+      sections: new FormArray([
+        new FormGroup({
+          type: new FormControl('text'),
+          content: new FormGroup({
+            text: new FormControl()
+          })
+        })
+      ])
     });
   }
 
   private code(item?: Section): FormGroup {
     return new FormGroup({
       language: new FormControl(item && item.content ? (<Code>item.content).language : null),
-      code: new FormControl(item && item.content ? (<Code>item.content).code : '')
+      code: new FormControl(item && item.content ? (<Code>item.content).code : ''),
+      caption: new FormControl()
     });
   }
 

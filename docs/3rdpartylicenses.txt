@@ -48,6 +48,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+documentations
+
 hammerjs
 MIT
 The MIT License (MIT)
@@ -377,6 +379,10 @@ MIT
 
 @angular/material/tooltip
 
+@angular/material/dialog
+
+@angular/material/button
+
 @angular/material/toolbar
 
 @angular/material/tabs
@@ -386,15 +392,13 @@ MIT
 
 @angular/material/form-field
 
-documentations
-
 @angular/material/select
 
 @angular/material/core
 
-@angular/material/button
-
 @angular/material/expansion
+
+@angular/material/slider
 
 @angular/material/card
 

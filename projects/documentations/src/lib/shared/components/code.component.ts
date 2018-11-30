@@ -4,14 +4,17 @@ import { Code } from '../../models/section-types';
 @Component({
   selector: 'docu-code',
   template: `
-    <mat-card>
-      <mat-card-content>
-        <div class="code" [innerHTML]="code?.code | syntaxPipe:code?.language"></div>
-      </mat-card-content>
-    </mat-card>
+    <figure>
+      <mat-card>
+        <mat-card-content>
+          <code [innerHTML]="code?.code | syntaxPipe:code?.language"></code>
+        </mat-card-content>
+      </mat-card>
+      <figcaption *ngIf="code?.caption">{{code.caption}}</figcaption>
+    </figure>
   `,
   styles: [`
-    :host, mat-card, mat-card-content, .code {
+    :host, mat-card, mat-card-content, code {
       width: 100%;
       box-sizing: border-box;
     }
@@ -19,7 +22,8 @@ import { Code } from '../../models/section-types';
       margin: 0 auto;
       background-color: rgba(0, 0, 0, 0.2);
     }
-    .code {
+    code {
+      display: block;
       font-family: 'Source Code Pro', monospace, roboto, sans-serif;
       padding: 16px;
       white-space: pre;

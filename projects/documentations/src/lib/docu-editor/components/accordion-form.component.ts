@@ -46,7 +46,7 @@ export class AccordionFormComponent implements OnInit {
   }
 
   addPanel(title: string) {
-    const template = { title: title, sections: [ { type: 'text', content: null }]};
+    const template = { title: title, sections: [ { type: 'text', content: { text: null } } ] };
     const documentation = this.dynamicForms.documentation();
     documentation.patchValue(template);
     if (!this.documentations) {

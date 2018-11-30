@@ -7,7 +7,7 @@ import { Image } from '../../models/section-types';
   <img *ngIf="content && !content?.caption && content?.imageUrl" [src]="content.imageUrl" [ngStyle]="{'width.%': content.textwidth}">
   <figure *ngIf="content?.caption && content?.imageUrl">
     <img [src]="content.imageUrl" [ngStyle]="{'width.%': content.textwidth}">
-    <figcaption>{{content.caption}}</figcaption>
+    <figcaption><b>Figure:</b> {{content.caption}}</figcaption>
   </figure>
   `,
   styles: [`

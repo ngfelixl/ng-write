@@ -39,7 +39,7 @@ import { DynamicFormsService } from '../services/dynamic-forms.service';
       justify-content: space-between;
       box-sizing: border-box;
     }
-    mat-card-content { display: flex; flex-wrap: wrap; }
+    mat-card-content { display: flex; flex-wrap: wrap; overflow-x: auto; }
     mat-card-content > .form { flex: 1 1 320px; min-width: 320px; }
     mat-card-content > .preview { flex: 1 1 320px; min-width: 320px; }
     mat-card { box-sizing: border-box; width: 100%; margin: 4px; }
@@ -70,7 +70,9 @@ export class SectionFormComponent implements OnInit, OnDestroy {
     if (this.typeControl) {
       this.subscription = this.typeControl.valueChanges.subscribe(type => {
         this.type = null;
-        delete this.section.content;
+        if (this.section && this.section.content) {
+          delete this.section.content;
+        }
         this.dynamicForms.update(this.sectionForm, { type: type });
         this.type = type;
       });
