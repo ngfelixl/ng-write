@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ngfelixl/lib-documentations.svg?branch=master)](https://travis-ci.org/ngfelixl/lib-documentations)
 
-See this library in action [here]. Documentation helper Angular components for writing documentations and articles. (https://ngfelixl.github.io/lib-documentations).
+See this library in action [here](https://ngfelixl.github.io/lib-documentations). Documentation helper Angular components for writing documentations and articles. (https://ngfelixl.github.io/lib-documentations).
 
 [![See animation on github](https://github.com/ngfelixl/lib-documentations/blob/master/projects/documentations/img/animation_docu.gif)](https://github.com/ngfelixl/lib-documentations/blob/master/projects/documentations/img/animation_docu.gif)
 
