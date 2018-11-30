@@ -41,14 +41,7 @@ export class DynamicFormsService {
   public documentation(): FormGroup {
     return new FormGroup({
       title: new FormControl(),
-      sections: new FormArray([
-        new FormGroup({
-          type: new FormControl('text'),
-          content: new FormGroup({
-            text: new FormControl()
-          })
-        })
-      ])
+      sections: new FormArray([])
     });
   }
 

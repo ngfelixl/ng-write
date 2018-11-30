@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core';
-import { FormArray, FormGroup } from '@angular/forms';
+import { FormArray, FormGroup, FormControl } from '@angular/forms';
 import { Documentation } from '../../models';
 import { DynamicFormsService } from '../services/dynamic-forms.service';
 
@@ -46,8 +46,14 @@ export class AccordionFormComponent implements OnInit {
   }
 
   addPanel(title: string) {
-    const template = { title: title, sections: [ { type: 'text', content: { text: null } } ] };
+    const template = { title: title, sections: [] };
     const documentation = this.dynamicForms.documentation();
+
+    // Add the first section manually as FormArrays do not patch
+    (documentation.get('sections') as FormArray).push(new FormGroup({
+      type: new FormControl('text'),
+      content: new FormGroup({ text: new FormControl() })
+    }));
     documentation.patchValue(template);
     if (!this.documentations) {
       this.documentations = [];

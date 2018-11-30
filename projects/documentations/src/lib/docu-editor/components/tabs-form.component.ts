@@ -1,5 +1,5 @@
 import { Component, Input, ChangeDetectionStrategy, OnInit } from '@angular/core';
-import { FormGroup, FormArray } from '@angular/forms';
+import { FormGroup, FormArray, FormControl } from '@angular/forms';
 import { Documentation } from '../../models';
 import { DynamicFormsService } from '../services/dynamic-forms.service';
 
@@ -44,6 +44,12 @@ export class TabsFormComponent implements OnInit {
 
   addTab(title: string) {
     const documentation = this.dynamicForms.documentation();
+
+    // Add the first section manually as FormArrays do not patch
+    (documentation.get('sections') as FormArray).push(new FormGroup({
+      type: new FormControl('text'),
+      content: new FormGroup({ text: new FormControl() })
+    }));
     documentation.patchValue({title: title, sections: [] });
     if (!this.documentations) {
       this.documentations = [];

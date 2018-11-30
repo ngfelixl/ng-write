@@ -48,7 +48,7 @@ const testDocumentation = {
   title: null,
   sections: [
     { type: 'text', content: { text: 'text1' } },
-    { type: 'code', content: { language: 'typescript', code: 'c1' }}
+    { type: 'code', content: { language: 'typescript', code: 'c1', caption: 'hello' }}
   ]
 };
 
@@ -62,7 +62,8 @@ describe('CodeFormComponent', () => {
     component = fixture.componentInstance;
     component.form = new FormGroup({
       language: new FormControl('typescript'),
-      code: new FormControl('c1')
+      code: new FormControl('c1'),
+      caption: new FormControl()
     });
     fixture.detectChanges();
   });
