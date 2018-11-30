@@ -8,12 +8,14 @@ import { TabsComponent } from './tabs.component';
 import { ContainerComponent } from './container.component';
 import { AccordionComponent } from './accordion.component';
 import { TableComponent } from './table.component';
+import { ImageComponent } from './image.component';
 
 export const components: any[] = [
   AccordionComponent,
   CodeComponent,
   ContainerComponent,
   CitationComponent,
+  ImageComponent,
   MathComponent,
   SectionComponent,
   TableComponent,

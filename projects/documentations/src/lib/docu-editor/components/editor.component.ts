@@ -1,7 +1,8 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Documentation } from '../../models';
 import { DynamicFormsService } from '../services/dynamic-forms.service';
+import { ImagesService } from '../services/images.service';
 
 @Component({
   selector: 'docu-editor',
@@ -13,12 +14,20 @@ import { DynamicFormsService } from '../services/dynamic-forms.service';
   `,
   styles: [``]
 })
-export class EditorComponent {
+export class EditorComponent implements OnInit {
   form: FormGroup;
   @Input() documentation: Documentation;
+  @Input() imageUrls: string[] = [];
   @Output() save = new EventEmitter<Documentation>();
 
-  constructor(private dynamicForms: DynamicFormsService) {
+  constructor(
+    private dynamicForms: DynamicFormsService,
+    private imagesService: ImagesService
+  ) {
     this.form = this.dynamicForms.documentation();
+  }
+
+  ngOnInit() {
+    this.imagesService.setImages(this.imageUrls);
   }
 }

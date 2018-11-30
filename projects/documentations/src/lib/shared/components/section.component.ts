@@ -11,6 +11,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
     <docu-tabs *ngIf="section?.type === 'tabs'" [tabs]="section?.content?.documentations"></docu-tabs>
     <docu-accordion *ngIf="section?.type === 'accordion'" [panels]="section?.content?.documentations"></docu-accordion>
     <docu-table *ngIf="section?.type === 'table'" [table]="section?.content"></docu-table>
+    <docu-image *ngIf="section?.type === 'image'" [content]="section?.content"></docu-image>
   `,
   styles: [`
     :host { display: block; margin: 0 auto; max-width: 1280px; padding: 16px; box-sizing: border-box; z-index: 1; }

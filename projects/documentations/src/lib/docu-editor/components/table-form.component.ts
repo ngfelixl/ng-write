@@ -41,7 +41,7 @@ export class TableFormComponent implements OnInit {
   get tableRows(): FormArray {
     return this.form.get('rows') as FormArray;
   }
-  get numRows(): number { return this.tableRows.length; }
+  get numRows(): number { return this.tableRows ? this.tableRows.length : 0; }
   get numCols(): number { return this.numRows > 0 ? (<FormArray>this.tableRows.at(0).get('cols')).length : 0; }
   get cols(): number[] { return Array(this.numCols).map((o, i) => i); }
 
@@ -54,6 +54,7 @@ export class TableFormComponent implements OnInit {
     if (!this.table) {
       this.table = { rows: [{ cols: [''] }] };
     }
+    console.log(this.table);
     for (let i = 0; i < this.table.rows.length; i++) {
       const row = this.table.rows[i];
       this.tableRows.push(new FormGroup({ cols: new FormArray(this.createControlsArray(row.cols)) } ));

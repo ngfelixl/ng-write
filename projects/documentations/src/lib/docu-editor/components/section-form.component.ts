@@ -19,6 +19,7 @@ import { DynamicFormsService } from '../services/dynamic-forms.service';
             <docu-tabs-form *ngIf="type === 'tabs'" [form]="content" [documentations]="documentations"></docu-tabs-form>
             <docu-accordion-form *ngIf="type === 'accordion'" [form]="content" [documentations]="documentations"></docu-accordion-form>
             <docu-table-form *ngIf="type === 'table'" [form]="content" [table]="section?.content"></docu-table-form>
+            <docu-image-form *ngIf="type === 'image'" [form]="content"></docu-image-form>
           </div>
         </div>
         <div class="preview">
@@ -68,44 +69,14 @@ export class SectionFormComponent implements OnInit, OnDestroy {
   ngOnInit() {
     if (this.typeControl) {
       this.subscription = this.typeControl.valueChanges.subscribe(type => {
-        const temp = this.type;
         this.type = null;
-        switch (temp) {
-          case 'code':
-            this.content.removeControl('language');
-            this.content.removeControl('code');
-            break;
-          case 'tabs':
-          case 'accordion':
-            this.content.removeControl('documentations');
-            break;
-          case 'table':
-            this.content.removeControl('table');
-            break;
-          default:
-            this.content.removeControl('text');
-        }
-
-        switch (type) {
-          case 'code':
-            this.content.addControl('language', new FormControl(null));
-            this.content.addControl('code', new FormControl(''));
-            break;
-          case 'tabs':
-          case 'accordion':
-            this.content.addControl('documentations', new FormArray([]));
-            break;
-          case 'table':
-            this.content.addControl('table', new FormGroup({}));
-            break;
-          default:
-            this.content.addControl('text', new FormControl());
-        }
+        delete this.section.content;
+        this.dynamicForms.update(this.sectionForm, { type: type });
         this.type = type;
       });
       this.type = this.typeControl.value;
     } else {
-      this.sectionForm = this.dynamicForms.default({ type: 'text' });
+      this.sectionForm = this.dynamicForms.create();
     }
   }
 

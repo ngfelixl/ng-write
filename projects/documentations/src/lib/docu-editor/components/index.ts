@@ -7,6 +7,8 @@ import { TabsFormComponent } from './tabs-form.component';
 import { DocumentationFormComponent } from './documentation-form.component';
 import { AccordionFormComponent } from './accordion-form.component';
 import { TableFormComponent } from './table-form.component';
+import { ImageFormComponent } from './image-form.component';
+import { ImageDialogComponent } from './image-dialog.component';
 
 export const components: any[] = [
   AccordionFormComponent,
@@ -14,6 +16,8 @@ export const components: any[] = [
   DocumentationFormComponent,
   EditorComponent,
   FormHeaderComponent,
+  ImageDialogComponent,
+  ImageFormComponent,
   SectionFormComponent,
   SimpleFormComponent,
   TableFormComponent,

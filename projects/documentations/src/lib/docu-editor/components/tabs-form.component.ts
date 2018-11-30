@@ -55,10 +55,10 @@ export class TabsFormComponent implements OnInit {
 
   adjustTabs() {
     this.documentationsForm.reset();
-    if (this.documentations.length > 0) {
-      for (const docu of this.documentations) {
+    if (this.documentations && this.documentations.length > 0) {
+      for (const documentation of this.documentations) {
         const item = this.dynamicForms.documentation();
-        item.patchValue(docu);
+        item.patchValue(documentation);
         this.documentationsForm.push(item);
       }
     } else {

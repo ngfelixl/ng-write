@@ -15,6 +15,9 @@ import { FormHeaderComponent } from '../lib/docu-editor/components/form-header.c
 import { DynamicFormsService } from '../lib/docu-editor/services/dynamic-forms.service';
 import { EditorComponent } from '../lib/docu-editor/components/editor.component';
 import { By } from '@angular/platform-browser';
+import { ImageFormComponent } from '../lib/docu-editor/components/image-form.component';
+import { ImageDialogComponent } from '../lib/docu-editor/components/image-dialog.component';
+import { ImagesService } from '../lib/docu-editor/services/images.service';
 
 beforeEach(async(() => {
   TestBed.configureTestingModule({
@@ -25,6 +28,8 @@ beforeEach(async(() => {
       DocumentationFormComponent,
       SectionFormComponent,
       FormHeaderComponent,
+      ImageDialogComponent,
+      ImageFormComponent,
       AccordionFormComponent,
       CodeFormComponent,
       SimpleFormComponent,
@@ -32,7 +37,8 @@ beforeEach(async(() => {
       TabsFormComponent
     ],
     providers: [
-      DynamicFormsService
+      DynamicFormsService,
+      ImagesService
     ]
   });
 }));

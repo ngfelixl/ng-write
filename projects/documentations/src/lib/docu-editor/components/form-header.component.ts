@@ -22,7 +22,8 @@ import { FormGroup } from '@angular/forms';
   styles: [`
     :host {
       display: flex; background-color: rgba(0,0,0,0.1); border-radius: 4px;
-      margin-bottom: 8px; align-items: center; padding: 4px; box-sizing: border-box; justify-content: space-between; }
+      margin-bottom: 8px; align-items: center; padding: 4px; box-sizing: border-box; justify-content: space-between;
+    }
     .action-buttons { display: grid; grid-template-columns: 1fr 1fr 1fr; }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -30,5 +31,5 @@ import { FormGroup } from '@angular/forms';
 export class FormHeaderComponent {
   @Input() form: FormGroup;
   @Output() action = new EventEmitter<string>();
-  options = ['Title', 'Text', 'Code', 'Citation', 'Math', 'Tabs', 'Table', 'Accordion'];
+  options = ['Accordion', 'Citation', 'Code', 'Image', 'Math', 'Table', 'Tabs', 'Text', 'Title' ];
 }

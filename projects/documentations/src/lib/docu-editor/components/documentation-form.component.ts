@@ -57,8 +57,8 @@ export class DocumentationFormComponent implements OnInit {
     return this.form.get('sections') as FormArray;
   }
 
-  addAfter(index: number) { this.sections.insert(index + 1, this.createSection()); }
-  addEnd() { this.sections.push(this.createSection()); }
+  addAfter(index: number) { this.sections.insert(index + 1, this.dynamicForms.create()); }
+  addEnd() { this.sections.push(this.dynamicForms.create()); }
   delete(index: number) { this.sections.removeAt(index); }
 
 
@@ -85,29 +85,13 @@ export class DocumentationFormComponent implements OnInit {
   }
 
 
-  createSection(item?: Section): FormGroup {
-    if (item) {
-      let formGroup: FormGroup;
-      switch (item.type) {
-        case 'code': formGroup = this.dynamicForms.code(item); break;
-        case 'tabs': formGroup = this.dynamicForms.tabs(item); break;
-        case 'accordion': formGroup = this.dynamicForms.tabs(item); break;
-        default: formGroup = this.dynamicForms.default(item);
-      }
-      formGroup.patchValue(item);
-      return formGroup;
-    } else {
-      return this.dynamicForms.default();
-    }
-  }
-
   adjustRows(sections) {
     this.sections.reset();
     if (sections.length === 0) {
-      this.sections.push(this.createSection());
+      this.sections.push(this.dynamicForms.create());
     } else {
       for (const section of sections) {
-        const item = this.createSection(section);
+        const item = this.dynamicForms.create(section);
         item.patchValue(section);
         this.sections.push(item);
       }

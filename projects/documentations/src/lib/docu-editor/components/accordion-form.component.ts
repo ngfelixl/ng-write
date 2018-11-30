@@ -46,12 +46,13 @@ export class AccordionFormComponent implements OnInit {
   }
 
   addPanel(title: string) {
+    const template = { title: title, sections: [ { type: 'text', content: null }]};
     const documentation = this.dynamicForms.documentation();
-    documentation.patchValue({title: title, sections: []});
+    documentation.patchValue(template);
     if (!this.documentations) {
       this.documentations = [];
     }
-    this.documentations.push({title: title, sections: []});
+    this.documentations.push(template);
     this.documentationsForm.push(documentation);
   }
 
@@ -59,9 +60,9 @@ export class AccordionFormComponent implements OnInit {
   adjustPanels() {
     this.documentationsForm.reset();
     if (this.documentations.length > 0) {
-      for (const docu of this.documentations) {
+      for (const documentation of this.documentations) {
         const item = this.dynamicForms.documentation();
-        item.patchValue(docu);
+        item.patchValue(documentation);
         this.documentationsForm.push(item);
       }
     } else {

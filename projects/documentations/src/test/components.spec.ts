@@ -13,6 +13,7 @@ import { MathComponent } from '../lib/shared/components/math.component';
 import { TabsComponent } from '../lib/shared/components/tabs.component';
 import { MaterialModule } from '../lib/shared/material.module';
 import { TableComponent } from '../lib/shared/components/table.component';
+import { ImageComponent } from '../lib/shared/components/image.component';
 
 beforeEach(async(() => {
   TestBed.configureTestingModule({
@@ -31,7 +32,8 @@ beforeEach(async(() => {
       SyntaxPipe,
       TabsComponent,
       TextPipe,
-      TableComponent
+      TableComponent,
+      ImageComponent
     ]
   });
 }));
