@@ -10,7 +10,7 @@ import { Code } from '../../models/section-types';
           <code [innerHTML]="code?.code | syntaxPipe:code?.language"></code>
         </mat-card-content>
       </mat-card>
-      <figcaption *ngIf="code?.caption">{{code.caption}}</figcaption>
+      <figcaption *ngIf="code?.caption"><b>Listing:</b> {{code.caption}}</figcaption>
     </figure>
   `,
   styles: [`
@@ -19,7 +19,7 @@ import { Code } from '../../models/section-types';
       box-sizing: border-box;
     }
     mat-card {
-      margin: 0 auto;
+      margin: 0 auto 8px auto;
       background-color: rgba(0, 0, 0, 0.2);
     }
     code {
