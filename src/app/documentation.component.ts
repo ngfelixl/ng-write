@@ -169,7 +169,13 @@ export class EntityEffects {
           { type: 'image', content: { imageUrl: 'https://cdn-images-1.medium.com/max/1600/1*P7x-_0XfQz6CVmMY_QAv0w.png', textwidth: 100, caption: 'Angular is nice.' } }
         ] },
         { title: 'Selectors', sections: [ { type: 'text', content: { text: '(っ◕‿◕)っ give me a hug.' } } ] }
-      ] } }
+      ] } },
+      { type: 'title', content: { text: 'Get in contact' } },
+      { type: 'text', content: { text: `Hi, I am Felix Lemke. If you like that library visit [my personal site](https://felixlemke.com) and/or follow me on
+[github](https://github.com/ngfelixl)
+[twitter](https://twitter.com/ngfelixl)
+[instagram](https://instagram.com/ngfelixl)` } },
+      { type: 'text', content: { text: '' } }
     ]
   };
 
