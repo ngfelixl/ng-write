@@ -10,6 +10,7 @@ export interface Text {
 
 export interface Table {
   rows: { cols: string[]; }[];
+  caption?: string;
 }
 
 export interface Image {

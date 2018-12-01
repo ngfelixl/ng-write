@@ -183,7 +183,6 @@ export class EntityEffects {
 
   docuChanged(documentation: any) {
     this.documentation = documentation;
-    console.log(documentation);
     this.cd.detectChanges();
   }
 }

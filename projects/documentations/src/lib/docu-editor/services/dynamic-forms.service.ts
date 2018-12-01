@@ -77,7 +77,8 @@ export class DynamicFormsService {
     return new FormGroup({
       rows: new FormArray([
         new FormGroup({ cols: new FormArray([]) })
-      ])
+      ]),
+      caption: new FormControl()
     });
   }
 }

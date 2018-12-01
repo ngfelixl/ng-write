@@ -5,32 +5,38 @@ import { Table } from '../../models/section-types';
 @Component({
   selector: 'docu-table-form',
   template: `
-    <table [formGroup]="form">
-      <tbody>
-        <tr>
-          <td></td>
-          <td *ngFor="let col of cols">
-            <button type="button" (click)="removeCol(col)">-</button>
-          </td>
-          <td><button type="button" (click)="addCol()">+</button></td>
-        </tr>
+    <div [formGroup]="form">
+      <table>
+        <tbody>
+          <tr>
+            <td></td>
+            <td *ngFor="let col of cols">
+              <button type="button" (click)="removeCol(col)">-</button>
+            </td>
+            <td><button type="button" (click)="addCol()">+</button></td>
+          </tr>
 
-        <tr *ngFor="let row of tableRows?.controls; let i = index" [formGroup]="row.get('cols')">
-          <td><button type="button" (click)="removeRow(i)">-</button></td>
-          <td *ngFor="let col of row?.get('cols').controls; let j = index"><input [formControlName]="j"></td>
-        </tr>
+          <tr *ngFor="let row of tableRows?.controls; let i = index" [formGroup]="row.get('cols')">
+            <td><button type="button" (click)="removeRow(i)">-</button></td>
+            <td *ngFor="let col of row?.get('cols').controls; let j = index"><input [formControlName]="j"></td>
+          </tr>
 
-        <tr>
-          <td><button type="button" (click)="addRow()">+</button></td>
-        </tr>
-      </tbody>
-    </table>
+          <tr>
+            <td><button type="button" (click)="addRow()">+</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <mat-form-field>
+        <input matInput formControlName="caption" placeholder="Caption">
+      </mat-form-field>
+    </div>
   `,
   styles: [`
     :host { width: 100%; overflow: auto; }
     table, tr, td { margin: 0; padding: 0; border: 0; outline: 0; cell-spacing: none; }
     td { border: 1px solid #ccc; text-align: center; }
     button { background-color: none; border: none; }
+    mat-form-field { width: 100%; margin-top: 8px; }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -54,7 +60,6 @@ export class TableFormComponent implements OnInit {
     if (!this.table) {
       this.table = { rows: [{ cols: [''] }] };
     }
-    console.log(this.table);
     for (let i = 0; i < this.table.rows.length; i++) {
       const row = this.table.rows[i];
       this.tableRows.push(new FormGroup({ cols: new FormArray(this.createControlsArray(row.cols)) } ));
