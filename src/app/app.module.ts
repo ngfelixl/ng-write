@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { DocumentationComponent } from './documentation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatTabsModule, MatToolbarModule } from '@angular/material';
+import { MatTabsModule, MatToolbarModule, MatIconModule, MatButtonModule } from '@angular/material';
 
 import { DocuModule, DocuEditorModule } from '../../projects/documentations/src/public_api';
 
@@ -20,7 +20,9 @@ import { DocuModule, DocuEditorModule } from '../../projects/documentations/src/
     DocuEditorModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

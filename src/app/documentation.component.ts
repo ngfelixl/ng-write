@@ -1,4 +1,5 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, ViewChild } from '@angular/core';
+import { EditorComponent } from 'projects/documentations/src/public_api';
 
 @Component({
   selector: 'app-documentation',
@@ -8,15 +9,19 @@ import { Component, ChangeDetectorRef } from '@angular/core';
       <mat-tab label="Editor">
         <docu-editor
           [documentation]="documentation"
-          [imageUrls]="imageUrls"
-          (save)="docuChanged($event)">
+          [imageUrls]="imageUrls">
           </docu-editor>
+        <button mat-raised-button color="primary" (click)="save()"><mat-icon>save</mat-icon> Save</button>
       </mat-tab>
     </mat-tab-group>
   `,
-  styles: [`:host { display: block; margin: 16px; }`]
+  styles: [`
+    :host { display: block; margin: 16px; }
+    button { margin: 4px; }
+  `]
 })
 export class DocumentationComponent {
+  @ViewChild(EditorComponent) editor: EditorComponent;
   imageUrls = [
     'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png',
     'https://cdn-images-1.medium.com/max/1600/1*P7x-_0XfQz6CVmMY_QAv0w.png'
@@ -70,7 +75,8 @@ export class AppModule { }` }},
             { cols: ['@Input() **documentation**', '(Optional) A documentation to patch the form initally'] },
             { cols: ['@Input() **imageUrls**', '(Optional) Urls (strings) of images available in the articles image section'] },
             { cols: ['@Output() **save($event)**', 'Event fired when the documentation is saved. *$event* will contain the documentation.'] }
-          ] } }
+          ] } },
+          { type: 'text', content: { text: 'On the other hand you can create a ViewChild which views the `EditorComponent`. Then create a `save` function which accesses the ViewChilds `form` attribute and call `getRawValue()` on it.' }}
         ] },
         { title: 'Deep nesting demo', sections: [
           { type: 'title', content: { text: 'API documentation of XY feature' }},
@@ -181,8 +187,8 @@ export class EntityEffects {
 
   constructor(private cd: ChangeDetectorRef) {}
 
-  docuChanged(documentation: any) {
-    this.documentation = documentation;
+  save() {
+    this.documentation = this.editor.form.getRawValue();
     this.cd.detectChanges();
   }
 }

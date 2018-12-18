@@ -9,7 +9,6 @@ import { ImagesService } from '../services/images.service';
   template: `
     <form [formGroup]="form" (ngSubmit)="save.emit(form.value)">
       <docu-documentation-form [form]="form" [documentation]="documentation"></docu-documentation-form>
-      <button mat-raised-button color="primary">Save</button>
     </form>
   `,
   styles: [``]
