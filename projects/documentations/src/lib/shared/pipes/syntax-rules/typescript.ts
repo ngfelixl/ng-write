@@ -14,6 +14,7 @@ export const typescript: SyntaxConfig = {
     while: colors.purple,
     try: colors.purple,
     catch: colors.purple,
+
     function: colors.blue,
     class: colors.blue,
     interface: colors.blue,

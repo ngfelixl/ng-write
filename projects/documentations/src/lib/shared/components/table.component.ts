@@ -7,13 +7,11 @@ import { Table } from '../../models/section-types';
     <figure>
       <mat-card>
         <mat-card-content>
-          <div class="row" *ngFor="let row of table?.rows; even as isEven; first as isFirst; last as isLast"
-            [class.even]="isEven"
-            [class.first]="isFirst"
-            [class.last]="isLast">
-            <div class="col" *ngFor="let col of row.cols" [innerHTML]="col | textPipe">
-            </div>
-          </div>
+          <table>
+            <tr *ngFor="let row of table?.rows; even as isEven;" [class.even]="isEven">
+              <td *ngFor="let col of row.cols" [innerHTML]="col | textPipe"></td>
+            </tr>
+          </table>
         </mat-card-content>
       </mat-card>
       <figcaption *ngIf="table?.caption"><b>Table:</b> {{table.caption}}</figcaption>
@@ -21,10 +19,16 @@ import { Table } from '../../models/section-types';
   `,
   styles: [`
     :host { width: 100%; }
-    mat-card { padding: 0; margin-bottom: 8px; }
-    .row { display: flex; }
-    .row.even { background-color: #eee; }
-    .col { flex: 1; padding: 12px; border: 1px solid #ddd; }
+    mat-card { display: block; padding: 0; margin-bottom: 8px; }
+    .even { background-color: #eee; }
+    mat-card, mat-card-content { max-width: 100%; }
+    table {
+      max-width: 100%;
+      border-spacing: 0;
+      border-collapse: collapse;
+      border-radius: 4px;
+    }
+    td { padding: 12px; 1px solid #ddd; }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

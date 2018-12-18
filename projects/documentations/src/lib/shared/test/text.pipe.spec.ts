@@ -1,4 +1,4 @@
-import { TextPipe } from './text.pipe';
+import { TextPipe } from '../pipes/text.pipe';
 
 describe('TextPipe', () => {
   let mockDomSanitizer;

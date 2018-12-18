@@ -20,21 +20,21 @@ export class SyntaxPipe implements PipeTransform {
 
       // Comments
       const commentsRegexp = new RegExp(/(\/\*[\w\'\s\r\n\*]*\*\/)|(\/\/[\w\s\']*)|(&lt;![--\s\w\>\/]*&gt;)/g);
-      code = code.replace(commentsRegexp, `\<span style="color: ${lang.comments}"\>$&\<\/span\>`);
+      code = code.replace(commentsRegexp, `\<span style="color: ${lang.comments};"\>$&\<\/span\>`);
 
       // Strings
       const stringsRegexp = new RegExp(/(\`[\s\S]*\`)|(&#039;(.*?)(&#039;\n\r))|(&quot;(.*?)&quot;)/g);
-      code = code.replace(stringsRegexp, `\<span style="color: ${lang.strings}"\>$&\<\/span\>`);
+      code = code.replace(stringsRegexp, `\<span style="color: ${lang.strings};"\>$&\<\/span\>`);
 
       // Decorators
       if (language === 'typescript' && lang.decorators) {
-        const decoratorsRegexp = new RegExp(/([\r\n]@[a-zA-Z]+)[^\(]+/g);
-        code = code.replace(decoratorsRegexp, `\<span style="color: ${lang.decorators}"\>$&\<\/span\>`);
+        const decoratorsRegexp = new RegExp(/[\r\n\ ]*?(@[a-zA-Z]+)/g);
+        code = code.replace(decoratorsRegexp, `\<span style="color: ${lang.decorators};"\>$&\<\/span\>`);
       }
 
       if (language === 'html') {
         const tagsRegexp = new RegExp(/(&lt;\/?[a-zA-Z]+\ ?.*&gt;)/g);
-        code = code.replace(tagsRegexp, `\<span style="color: #0000bb"\>$&\<\/span\>`);
+        code = code.replace(tagsRegexp, `\<span style="color: #0000bb;"\>$&\<\/span\>`);
       }
 
       return this.sanitizer.bypassSecurityTrustHtml(code);
