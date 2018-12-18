@@ -3,6 +3,8 @@ import { Documentation } from '../../models/documentation';
 import { UpdateMetaService } from '../services/update-meta.service';
 import { MetaData } from '../../models/meta-data';
 import { Text } from '../../models/section-types';
+import { Config } from '../../models/config';
+
 
 @Component({
   selector: 'docu-article',
@@ -15,6 +17,7 @@ import { Text } from '../../models/section-types';
 export class ArticleComponent implements OnInit {
   @Input() documentation: Documentation;
   @Input() updateMeta = false;
+  @Input() config: Config;
 
   constructor(private updateMetaService: UpdateMetaService) {}
 
