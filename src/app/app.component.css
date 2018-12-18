@@ -1,3 +1,5 @@
 
-.copyright { font-size: 12px; }
+.copyright { font-size: 12px; color: white; }
 mat-toolbar { z-index: 12; }
+img { width: 100%; }
+mat-toolbar button { margin: 0 0 0 8px; }
