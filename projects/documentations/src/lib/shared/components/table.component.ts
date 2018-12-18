@@ -19,16 +19,10 @@ import { Table } from '../../models/section-types';
   `,
   styles: [`
     :host { width: 100%; }
-    mat-card { display: block; padding: 0; margin-bottom: 8px; }
-    .even { background-color: #eee; }
-    mat-card, mat-card-content { max-width: 100%; }
-    table {
-      max-width: 100%;
-      border-spacing: 0;
-      border-collapse: collapse;
-      border-radius: 4px;
-    }
-    td { padding: 12px; 1px solid #ddd; }
+    mat-card { padding: 0; margin-bottom: 8px; }
+    table { width: 100%; border-collapse: collapse; border-radius: 4px; overflow: hidden; }
+    tr.even { background-color: #eee; }
+    td { padding: 12px; border: 1px solid #ddd; }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { MatToolbarModule, MatTabsModule } from '@angular/material';
+import { MatToolbarModule, MatTabsModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { DocumentationComponent } from './documentation.component';
 
 import { DocuModule, DocuEditorModule } from '../../projects/documentations/src/public_api';
@@ -11,6 +11,8 @@ describe('AppComponent', () => {
       imports: [
         MatToolbarModule,
         MatTabsModule,
+        MatIconModule,
+        MatButtonModule,
         DocuModule,
         DocuEditorModule
       ],

@@ -106,7 +106,7 @@ export class AppModule { }` }},
       { type: 'text', content: { text: 'The above equation is generated using the following latex expression' } },
       { type: 'code', content: { code: 'y_{n+1} = y_n + h\\sum_{j=1}^s b_jk_j', caption: 'Latex expressions in documentations' } },
       { type: 'text', content: { text: 'Displaying data is a common task for writing scientific, educational or other types of posts/blogs/aricles or whatever. Therefore a table component can\'t be missed. There is example data in the following table.' } },
-      { type: 'table', content: { rows: [ { cols: ['', '**CPU** [s]', '**GPU** [s]', '**FPGA** [s]'] }, { cols: ['**Test suite 1**', '5.6', '6.3', '21.2'] }, { cols: ['**Test suite 2**', '5.6', '6.3', '35.7'] }] } },
+      { type: 'table', content: { caption: 'Test suites comparison on different processing units', rows: [ { cols: ['', '**CPU** [s]', '**GPU** [s]', '**FPGA** [s]'] }, { cols: ['**Test suite 1**', '5.6', '6.3', '21.2'] }, { cols: ['**Test suite 2**', '5.6', '6.3', '35.7'] }] } },
       { type: 'title', content: { text: 'Setup an NgRX store' } },
       { type: 'accordion', content: { documentations: [
         { title: 'Actions', sections: [
