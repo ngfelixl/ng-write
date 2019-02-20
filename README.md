@@ -1,6 +1,6 @@
 # LibDocumentation
 
-Read the library [documentation](https://github.com/ngfelixl/lib-documentations/blob/master/projects/documentations/README.md).
+Read the library [documentation](https://github.com/ngfelixl/documentations/blob/master/projects/documentations/README.md).
 
 ## Development server
 
