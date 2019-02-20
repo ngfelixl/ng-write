@@ -1,6 +1,6 @@
 {
   "name": "documentations",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "author": {
     "name": "Felix Lemke",
     "email": "flemke.dev@gmail.com",
@@ -19,12 +19,12 @@
     "syntaxhighlighting"
   ],
   "license": "BSD-3",
-  "homepage": "https://ngfelixl.github.io/lib-documentations",
+  "homepage": "https://ngfelixl.github.io/documentations",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ngfelixl/lib-documentations/"
+    "url": "https://github.com/ngfelixl/documentations/"
   },
-  "bugs": "https://github.com/ngfelixl/lib-documentations/issues",
+  "bugs": "https://github.com/ngfelixl/documentations/issues",
   "peerDependencies": {
     "@angular/common": "^7.1.0",
     "@angular/core": "^7.1.0",

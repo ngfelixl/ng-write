@@ -71,7 +71,14 @@ The document can be displayed using
 
 which just has a `@Input() documentation: Documentation` interface.
 
-## Get in contact
+## Get in touch
 
-- Check the [authors website](https://felixlemke.com)
-- Get in touch via [twitter](https://twitter.com/ngfelixl) or [facebook](https://www.facebook.com/ngfelixlemke/)
+[![twitter](https://img.shields.io/badge/twitter-%40ngfelixl-blue.svg?logo=twitter)](https://twitter.com/intent/follow?screen_name=ngfelixl)
+[![github](https://img.shields.io/badge/github-%40ngfelixl-blue.svg?logo=github)](https://github.com/ngfelixl)
+
+Hi, I am Felix,
+Angular and NgRX contributor
+
+![avatar](https://avatars2.githubusercontent.com/u/24190530?s=200&v=4)
+
+If you like this library, think about giving it a star or follow me on twitter or github.
