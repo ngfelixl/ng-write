@@ -1,19 +1,19 @@
 # documentations - the Angular article library
 
-[![Build Status](https://travis-ci.org/ngfelixl/lib-documentations.svg?branch=master)](https://travis-ci.org/ngfelixl/lib-documentations)
+[![Build Status](https://travis-ci.org/ngfelixl/documentations.svg?branch=master)](https://travis-ci.org/ngfelixl/documentations)
 
-See this library in action [here](https://ngfelixl.github.io/lib-documentations). Documentation helper Angular components for writing documentations and articles. (https://ngfelixl.github.io/lib-documentations).
+See this library in action [here](https://ngfelixl.github.io/documentations). Documentation helper Angular components for writing documentations and articles. (https://ngfelixl.github.io/documentations).
 
-[![See animation on github](https://github.com/ngfelixl/lib-documentations/blob/master/projects/documentations/img/animation_docu.gif)](https://github.com/ngfelixl/lib-documentations/blob/master/projects/documentations/img/animation_docu.gif)
+[![See animation on github](https://github.com/ngfelixl/documentations/blob/master/projects/documentations/img/animation_docu.gif)](https://github.com/ngfelixl/documentations/blob/master/projects/documentations/img/animation_docu.gif)
 
 ## Installation
 
 Add the package to your angular project using
 
 ```bash
-npm install ng-docu
+npm install documentations
 # or
-yarn add ng-docu
+yarn add documentations
 ```
 
 Since math requires katex for rendering proper LaTeX expressions, one
