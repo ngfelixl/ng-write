@@ -21,7 +21,7 @@ import { EditorComponent } from 'projects/documentations/src/public_api';
   `]
 })
 export class DocumentationComponent {
-  @ViewChild(EditorComponent) editor: EditorComponent;
+  @ViewChild(EditorComponent, { static: false }) editor: EditorComponent;
   imageUrls = [
     'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png',
     'https://cdn-images-1.medium.com/max/1600/1*P7x-_0XfQz6CVmMY_QAv0w.png'
