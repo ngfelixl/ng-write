@@ -1,6 +1,7 @@
 # documentations - the Angular article library
 
 [![Build Status](https://travis-ci.org/ngfelixl/documentations.svg?branch=master)](https://travis-ci.org/ngfelixl/documentations)
+![npm](https://img.shields.io/npm/v/documentations)
 
 See this library in action [here](https://ngfelixl.github.io/documentations). Documentation helper Angular components for writing documentations and articles. (https://ngfelixl.github.io/documentations).
 
@@ -77,8 +78,6 @@ which just has a `@Input() documentation: Documentation` interface.
 [![github](https://img.shields.io/badge/github-%40ngfelixl-blue.svg?logo=github)](https://github.com/ngfelixl)
 
 Hi, I am Felix,
-Angular and NgRX contributor
+Angular, RxJS and NgRX contributor. If you like this library, think about giving it a star, follow me on twitter or github or visit my personal [website](https://felixlemke.dev).
 
-![avatar](https://avatars2.githubusercontent.com/u/24190530?s=200&v=4)
-
-If you like this library, think about giving it a star or follow me on twitter or github.
+![avatar](https://avatars2.githubusercontent.com/u/24190530?s=150&v=4)
