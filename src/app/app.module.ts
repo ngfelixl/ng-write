@@ -5,7 +5,10 @@ import { AppComponent } from './app.component';
 import { DocumentationComponent } from './documentation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatTabsModule, MatToolbarModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { DocuModule, DocuEditorModule } from '../../projects/documentations/src/public_api';
 

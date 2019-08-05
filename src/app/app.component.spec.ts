@@ -1,6 +1,9 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { MatToolbarModule, MatTabsModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { DocumentationComponent } from './documentation.component';
 
 import { DocuModule, DocuEditorModule } from '../../projects/documentations/src/public_api';
