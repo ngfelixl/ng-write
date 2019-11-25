@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input, ChangeDetectorRef } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ImageDialogComponent } from './image-dialog.component';
-import { ImagesService } from '../services/images.service';
+import { ImageDialogComponent } from '../image-dialog/image-dialog.component';
+import { ImagesService } from '../../services/images.service';
 import { FormGroup } from '@angular/forms';
 
 @Component({
