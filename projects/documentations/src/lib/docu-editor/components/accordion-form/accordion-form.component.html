@@ -1,0 +1,18 @@
+<div [formGroup]="form">
+  <mat-accordion formArrayName="documentations">
+    <mat-expansion-panel *ngFor="let documentationForm of documentationsForm?.controls; let i = index">
+      <mat-expansion-panel-header>
+        <mat-panel-title>{{documentationForm.value.title}}</mat-panel-title>
+      </mat-expansion-panel-header>
+      <docu-documentation-form [form]="documentationForm" [documentation]="getDocumentation(i)"></docu-documentation-form>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header><mat-panel-title>+ Add</mat-panel-title></mat-expansion-panel-header>
+      <mat-form-field>
+        <input matInput placeholder="Panel label" #title>
+      </mat-form-field>
+      <button type="button" mat-flat-button color="accent" (click)="addPanel(title.value)">Create Panel</button>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

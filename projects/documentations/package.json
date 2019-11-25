@@ -1,6 +1,6 @@
 {
   "name": "documentations",
-  "version": "8.0.1",
+  "version": "9.0.0",
   "author": {
     "name": "Felix Lemke",
     "email": "flemke.dev@gmail.com",
@@ -26,9 +26,9 @@
   },
   "bugs": "https://github.com/ngfelixl/documentations/issues",
   "peerDependencies": {
-    "@angular/common": "^8.0.0",
-    "@angular/core": "^8.0.0",
-    "@angular/material": "^8.0.0",
-    "katex": "^0.10.0"
+    "@angular/common": "^9.0.0",
+    "@angular/core": "^9.0.0",
+    "@angular/material": "^9.0.0",
+    "katex": "^0.11.1"
   }
 }

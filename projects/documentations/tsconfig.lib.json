@@ -18,13 +18,15 @@
     ]
   },
   "angularCompilerOptions": {
-    "annotateForClosureCompiler": true,
     "skipTemplateCodegen": true,
     "strictMetadataEmit": true,
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
     "enableResourceInlining": true
   },
+  "files": [
+    "./lib/public_api.ts"
+  ],
   "exclude": [
     "src/test.ts",
     "**/*.spec.ts"

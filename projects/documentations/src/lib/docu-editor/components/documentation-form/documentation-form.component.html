@@ -1,0 +1,16 @@
+<div [formGroup]="form">
+  <div formArrayName="sections" class="list" cdkDropList (cdkDropListDropped)="drop($event)">
+      <docu-section-form
+        *ngFor="let section of sections?.controls; let i = index"
+        class="list-item"
+        [sectionForm]="section"
+        [section]="documentation?.sections[i]"
+        [formGroupName]="i"
+        (action)="do($event, i)" cdkDrag cdkDragLockAxis="y">
+        <button type="button" class="drag-handle" mat-icon-button cdkDragHandle matTooltip="Drag item">
+          <mat-icon>unfold_more</mat-icon>
+        </button>
+      </docu-section-form>
+  </div>
+  <button mat-raised-button type="button" color="accent" (click)="addEnd()" class="add-button">Add section</button>
+</div>`

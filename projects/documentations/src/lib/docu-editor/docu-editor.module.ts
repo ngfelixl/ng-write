@@ -4,11 +4,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { SharedModule } from '../shared/shared.module';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 
 import { components } from './components/index';
 import { services } from './services/index';
-import { ImageDialogComponent } from './components/image-dialog.component';
+import { ImageDialogComponent } from './components/image-dialog/image-dialog.component';
 
 
 @NgModule({
@@ -17,8 +16,7 @@ import { ImageDialogComponent } from './components/image-dialog.component';
     ReactiveFormsModule,
     MaterialModule,
     SharedModule,
-    DragDropModule,
-    ScrollDispatchModule
+    DragDropModule
   ],
   declarations: [
     components

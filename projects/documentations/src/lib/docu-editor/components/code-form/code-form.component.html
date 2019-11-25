@@ -1,0 +1,17 @@
+<div [formGroup]="form" class="code-form">
+  <mat-form-field class="language">
+    <mat-select placeholder="Language" formControlName="language">
+      <mat-option value="typescript">Typescript</mat-option>
+      <mat-option value="cpp">C++</mat-option>
+      <mat-option value="html">HTML</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="code">
+    <textarea matInput formControlName="code" placeholder="Code" cdkTextareaAutosize></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="caption" placeholder="Caption">
+  </mat-form-field>
+</div>

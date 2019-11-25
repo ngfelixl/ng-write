@@ -26,5 +26,8 @@
         "dist/documentations/*"
       ]
     }
+  },
+  "angularCompilerOptions": {
+    "enableIvy": true
   }
 }

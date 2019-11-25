@@ -1,46 +1,13 @@
 import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core';
 import { FormGroup, FormArray } from '@angular/forms';
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
-import { Documentation, Section } from '../../models';
-import { DynamicFormsService } from '../services/dynamic-forms.service';
+import { Documentation } from '../../../models';
+import { DynamicFormsService } from '../../services/dynamic-forms.service';
 
 @Component({
   selector: 'docu-documentation-form',
-  template: `
-    <div [formGroup]="form">
-      <div formArrayName="sections" class="list" cdkDropList (cdkDropListDropped)="drop($event)">
-          <docu-section-form
-            *ngFor="let section of sections?.controls; let i = index"
-            class="list-item"
-            [sectionForm]="section"
-            [section]="documentation?.sections[i]"
-            [formGroupName]="i"
-            (action)="do($event, i)" cdkDrag cdkDragLockAxis="y">
-            <button type="button" class="drag-handle" mat-icon-button cdkDragHandle matTooltip="Drag item">
-              <mat-icon>unfold_more</mat-icon>
-            </button>
-          </docu-section-form>
-      </div>
-      <button mat-raised-button type="button" color="accent" (click)="addEnd()" class="add-button">Add section</button>
-    </div>`,
-  styles: [`
-    .cdk-drag-placeholder { opacity: 0; }
-    .list-item.cdk-drag-preview {
-      box-sizing: border-box;
-      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-                  0 8px 10px 1px rgba(0, 0, 0, 0.14),
-                  0 3px 14px 2px rgba(0, 0, 0, 0.12);
-    }
-    .list { display: block; max-width: 100%; min-height: 60px; width: 100%; }
-    .list.cdk-drop-list-dragging .list-item:not(.cdk-drag-placeholder) {
-      transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-    }
-    .cdk-drag-animating {
-      transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-    }
-    .drag-handle { cursor: move; }
-    .add-button { margin: 4px; }
-  `],
+  templateUrl: './documentation-form.component.html',
+  styleUrls: [ './documentation-form.component.css' ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DocumentationFormComponent implements OnInit {

@@ -1,31 +1,11 @@
 import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core';
 import { FormArray, FormGroup, FormControl } from '@angular/forms';
-import { Documentation } from '../../models';
-import { DynamicFormsService } from '../services/dynamic-forms.service';
+import { Documentation } from '../../../models';
+import { DynamicFormsService } from '../../services/dynamic-forms.service';
 
 @Component({
   selector: 'docu-accordion-form',
-  template: `
-    <div [formGroup]="form">
-      <mat-accordion formArrayName="documentations">
-        <mat-expansion-panel *ngFor="let documentationForm of documentationsForm?.controls; let i = index">
-          <mat-expansion-panel-header>
-            <mat-panel-title>{{documentationForm.value.title}}</mat-panel-title>
-          </mat-expansion-panel-header>
-          <docu-documentation-form [form]="documentationForm" [documentation]="getDocumentation(i)"></docu-documentation-form>
-        </mat-expansion-panel>
-
-        <mat-expansion-panel>
-          <mat-expansion-panel-header><mat-panel-title>+ Add</mat-panel-title></mat-expansion-panel-header>
-          <mat-form-field>
-            <input matInput placeholder="Panel label" #title>
-          </mat-form-field>
-          <button type="button" mat-flat-button color="accent" (click)="addPanel(title.value)">Create Panel</button>
-        </mat-expansion-panel>
-      </mat-accordion>
-    </div>
-  `,
-  styles: [``],
+  templateUrl: './accordion-form.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AccordionFormComponent implements OnInit {

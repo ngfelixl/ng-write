@@ -1,8 +1,8 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { Documentation } from '../../models';
-import { DynamicFormsService } from '../services/dynamic-forms.service';
-import { ImagesService } from '../services/images.service';
+import { Documentation } from '../../../models';
+import { DynamicFormsService } from '../../services/dynamic-forms.service';
+import { ImagesService } from '../../services/images.service';
 
 @Component({
   selector: 'docu-editor',
@@ -11,7 +11,8 @@ import { ImagesService } from '../services/images.service';
       <docu-documentation-form [form]="form" [documentation]="documentation"></docu-documentation-form>
     </form>
   `,
-  styles: [``]
+  styles: [``],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EditorComponent implements OnInit {
   form: FormGroup;
