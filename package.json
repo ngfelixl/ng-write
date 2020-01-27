@@ -1,6 +1,6 @@
 {
   "name": "lib-documentations",
-  "version": "9.0.0-rc0",
+  "version": "9.0.1-rc0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
