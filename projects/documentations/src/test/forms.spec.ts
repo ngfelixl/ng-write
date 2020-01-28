@@ -5,18 +5,18 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../lib/docu-editor/material.module';
 
 import { SimpleFormComponent } from '../lib/docu-editor/components/simple-form.component';
-import { CodeFormComponent } from '../lib/docu-editor/components/code-form.component';
+import { CodeFormComponent } from '../lib/docu-editor/components/code-form/code-form.component';
 import { SectionFormComponent } from '../lib/docu-editor/components/section-form.component';
-import { DocumentationFormComponent } from '../lib/docu-editor/components/documentation-form.component';
+import { DocumentationFormComponent } from '../lib/docu-editor/components/documentation-form/documentation-form.component';
 import { TableFormComponent } from '../lib/docu-editor/components/table-form.component';
-import { AccordionFormComponent } from '../lib/docu-editor/components/accordion-form.component';
+import { AccordionFormComponent } from '../lib/docu-editor/components/accordion-form/accordion-form.component';
 import { TabsFormComponent } from '../lib/docu-editor/components/tabs-form.component';
-import { FormHeaderComponent } from '../lib/docu-editor/components/form-header.component';
+import { FormHeaderComponent } from '../lib/docu-editor/components/form-header/form-header.component';
 import { DynamicFormsService } from '../lib/docu-editor/services/dynamic-forms.service';
-import { EditorComponent } from '../lib/docu-editor/components/editor.component';
+import { EditorComponent } from '../lib/docu-editor/components/editor/editor.component';
 import { By } from '@angular/platform-browser';
-import { ImageFormComponent } from '../lib/docu-editor/components/image-form.component';
-import { ImageDialogComponent } from '../lib/docu-editor/components/image-dialog.component';
+import { ImageFormComponent } from '../lib/docu-editor/components/image-form/image-form.component';
+import { ImageDialogComponent } from '../lib/docu-editor/components/image-dialog/image-dialog.component';
 import { ImagesService } from '../lib/docu-editor/services/images.service';
 
 beforeEach(async(() => {
