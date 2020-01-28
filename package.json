@@ -1,6 +1,6 @@
 {
   "name": "lib-documentations",
-  "version": "9.0.2",
+  "version": "9.0.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -31,7 +31,6 @@
     "@angular/platform-browser": "^9.0.0-rc.11",
     "@angular/platform-browser-dynamic": "^9.0.0-rc.11",
     "@angular/router": "^9.0.0-rc.11",
-    "@types/katex": "^0.10.2",
     "core-js": "^3.4.2",
     "katex": "^0.11.1",
     "rxjs": "^6.5.3",
@@ -46,6 +45,7 @@
     "@angular/language-service": "^9.0.0-rc.11",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.8",
+    "@types/katex": "^0.10.2",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",

@@ -1,11 +1,11 @@
-# documentations - the Angular article library
+# documentations (for Angular)
+
+Article editor and article visualization for Angular. Just property-bind the returned object of the article editor to the article visualization. This library is ready for usage with the Ivy rendering engine at version `9.0.2` and following. See this library in action [here](https://ngfelixl.github.io/documentations).
 
 [![Build Status](https://travis-ci.org/ngfelixl/documentations.svg?branch=master)](https://travis-ci.org/ngfelixl/documentations)
 ![npm](https://img.shields.io/npm/v/documentations)
 
-See this library in action [here](https://ngfelixl.github.io/documentations). Documentation helper Angular components for writing documentations and articles. (https://ngfelixl.github.io/documentations).
-
-[![See animation on github](https://github.com/ngfelixl/documentations/blob/master/projects/documentations/img/animation_docu.gif)](https://github.com/ngfelixl/documentations/blob/master/projects/documentations/img/animation_docu.gif)
+[![See animation on github](./img/animation_docu.gif)](https://ngfelixl.github.io/documentations)
 
 ## Installation
 
@@ -13,71 +13,72 @@ Add the package to your angular project using
 
 ```bash
 npm install documentations
-# or
-yarn add documentations
 ```
 
-Since math requires katex for rendering proper LaTeX expressions, one
-need to include the katex styles in the **angular.json** file manually.
+## The Editor
 
-```json
-"projects": {
-  "projectID": {
-    "architect": {
-      "build": {
-        "options": {
-          "styles": [
-            "./node_modules/katex/dist/katex.min.css"
-```
-
-replace `projectID` with your projects name.
-
-## Usage
-
-There are two modules to use. The `DocuModule` and the `DocuEditorModule`. The
-`DocuModule` has got predefined components for displaying the documentation generated
-using the `DocuEditorModule`.
-
-At first import one of these modules in your application module.
+Make sure to have the `DocuEditorModule` imported. 
 
 ```typescript
 @NgModule({
-  imports: [ DocuModule, DocuEditorModule ]
+  imports: [ DocuEditorModule ]
 })
-export class ApplicationModule{}
+export class ApplicationModule {}
 ```
 
-### The documentation editor
+The module provides a complete form with live rendering. It should integrate with your **@angular/material** configuration. In the template simply use the editor tag to create a complete form for the article.
 
-Make sure to have the `DocuEditorModule` imported. The module provides a complete form with live rendering. It should integrate with your **@angular/material** configuration.
-
-In the template simply use the editor tag to create a complete form for the article.
-
-```
-<docu-editor></docu-editor>
+```html
+<docu-editor (save)="saveDoc($event)"></docu-editor>
 ```
 
-#### <docu-editor> API
+In the component you can define a function to handle the `save` event. For example like:
+
+```typescript
+@Component({...})
+export class AppComponent {
+  doc: Documentation;
+
+  saveDoc(doc: Documentation) {
+    this.doc = doc;
+  }
+}
+```
+
+You addition to that you can also define a `documentation` input data binding to the `docu-editor` tag to patch the documentation form.
 
 - `@Output() save($event)`: When the user saves the form, the save event will emit and contain the complete nested form.
 - `@Input() documentation: Documentation`: The user can patch the form with a previously created documentation.
 
-### Displaying the document
+## The Article
 
-The document can be displayed using
+Make sure to import the `DocuModule`.
 
+```typescript
+@NgModule({
+  imports: [ DocuModule ]
+})
+export class ApplicationModule {}
 ```
-<docu-article></docu-article>
+
+Then you can use the following tag to display the documentation
+
+```html
+<docu-article [documentation]="doc"></docu-article>
 ```
 
-which just has a `@Input() documentation: Documentation` interface.
+- `@Input() documentation: Documentation` interface.
+
+## Contributing
+
+Contributions are welcome. Please stick to the Angular commit message guidelines as described in this [document](https://github.com/angular/angular/blob/master/CONTRIBUTING.md) and describe your problems as detailed as possible.
 
 ## Get in touch
 
 [![twitter](https://img.shields.io/badge/twitter-%40ngfelixl-blue.svg?logo=twitter)](https://twitter.com/intent/follow?screen_name=ngfelixl)
 [![github](https://img.shields.io/badge/github-%40ngfelixl-blue.svg?logo=github)](https://github.com/ngfelixl)
 
-Hi, I am Felix,
-Angular, RxJS and NgRX contributor. If you like this library, think about giving it a star, follow me on twitter or github or visit my personal [website](https://felixlemke.dev).
+Hi, I am Felix,<br>
+Senior Software Engineer, Angular, RxJS and NgRX contributor. For direct contact please add me on twitter, github or visit my personal [website](https://felixlemke.dev).
 
 ![avatar](https://avatars2.githubusercontent.com/u/24190530?s=150&v=4)

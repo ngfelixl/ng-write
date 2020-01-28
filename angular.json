@@ -54,8 +54,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "baseHref": "./",
-              "deployUrl": "https://ngfelixl.github.io/documentations/"
+              "baseHref": "/"
             }
           }
         },
