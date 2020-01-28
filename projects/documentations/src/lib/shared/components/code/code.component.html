@@ -1,0 +1,8 @@
+<figure>
+  <mat-card>
+    <mat-card-content>
+      <code [innerHTML]="code?.code | syntaxPipe:code?.language"></code>
+    </mat-card-content>
+  </mat-card>
+  <figcaption *ngIf="code?.caption"><b>Listing:</b> {{code.caption}}</figcaption>
+</figure>

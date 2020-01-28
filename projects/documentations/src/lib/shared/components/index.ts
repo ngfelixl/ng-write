@@ -1,4 +1,4 @@
-import { CodeComponent } from './code.component';
+import { CodeComponent } from './code/code.component';
 import { TextComponent } from './text.component';
 import { TitleComponent } from './title.component';
 import { SectionComponent } from './section.component';

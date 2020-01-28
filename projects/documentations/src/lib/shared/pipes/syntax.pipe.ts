@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
-import { syntaxRules } from './syntax-rules';
+import { syntaxRules, colors } from './syntax-rules';
 
 @Pipe({ name: 'syntaxPipe' })
 export class SyntaxPipe implements PipeTransform {
@@ -28,13 +28,13 @@ export class SyntaxPipe implements PipeTransform {
 
       // Decorators
       if (language === 'typescript' && lang.decorators) {
-        const decoratorsRegexp = new RegExp(/[\r\n\ ]*?(@[a-zA-Z]+)/g);
+        const decoratorsRegexp = new RegExp(/[\r\n\ ]*?(@[a-zA-Z]+)\(/g);
         code = code.replace(decoratorsRegexp, `\<span style="color: ${lang.decorators};"\>$&\<\/span\>`);
       }
 
       if (language === 'html') {
         const tagsRegexp = new RegExp(/(&lt;\/?[a-zA-Z]+\ ?.*&gt;)/g);
-        code = code.replace(tagsRegexp, `\<span style="color: #0000bb;"\>$&\<\/span\>`);
+        code = code.replace(tagsRegexp, `\<span style="color: ${colors.blue}"\>$&\<\/span\>`);
       }
 
       return this.sanitizer.bypassSecurityTrustHtml(code);

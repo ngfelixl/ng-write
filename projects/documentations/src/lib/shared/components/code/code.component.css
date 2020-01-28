@@ -1,0 +1,16 @@
+:host, mat-card, mat-card-content, code {
+  width: 100%;
+  box-sizing: border-box;
+}
+mat-card {
+  margin: 0 auto 8px auto;
+  background-color: rgb(38, 50, 56);
+}
+code {
+  display: block;
+  font-family: 'Source Code Pro', monospace, roboto, sans-serif;
+  padding: 16px;
+  white-space: pre;
+  overflow-x: auto;
+  color: white;
+}

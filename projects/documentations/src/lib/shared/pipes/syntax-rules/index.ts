@@ -8,3 +8,5 @@ export const syntaxRules: SyntaxConfig[] = [
   cpp,
   html
 ];
+
+export * from './colors';
