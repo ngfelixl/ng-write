@@ -7,6 +7,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
     .code-form { display: flex; flex-direction: column; }
     .language { flex: 0 0 auto; }
     .code { flex: 1 1 0; }
+    .code textarea { font-family: monospace; }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

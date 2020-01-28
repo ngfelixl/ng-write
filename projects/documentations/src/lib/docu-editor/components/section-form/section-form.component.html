@@ -1,0 +1,38 @@
+<mat-card>
+  <mat-card-content>
+    <div [formGroup]="sectionForm" class="form">
+      <div class="side-controls">
+        <button mat-icon-button (click)="edit = !edit">
+          <mat-icon *ngIf="edit" matTooltip="Toggle Review Mode">pageview</mat-icon>
+          <mat-icon *ngIf="!edit" matTooltip="Toggle Edit Mode">edit</mat-icon>
+        </button>
+        <div class="action-buttons" *ngIf="edit">
+          <ng-content></ng-content>
+        </div>
+        <button *ngIf="edit" type="button" [matMenuTriggerFor]="typeSelect" mat-icon-button matTooltip="Select a paragraph type">
+          <mat-icon>list</mat-icon>
+        </button>
+        <mat-menu #typeSelect="matMenu">
+          <button *ngFor="let type of types" mat-menu-item class="type-select" (click)="typeControl.setValue(type)">{{type}}</button>
+        </mat-menu>
+        <button *ngIf="edit" type="button" mat-icon-button (click)="action.emit('delete')" matTooltip="Delete this section">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button *ngIf="edit" type="button" mat-icon-button (click)="action.emit('add')" matTooltip="Add another section below">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+      <div class="section-form" [class.hidden]="!edit">
+        <docu-simple-form *ngIf="isSimple(type)" [form]="content"></docu-simple-form>
+        <docu-code-form *ngIf="type === 'code'" [form]="content"></docu-code-form>
+        <docu-tabs-form *ngIf="type === 'tabs'" [form]="content" [documentations]="documentations"></docu-tabs-form>
+        <docu-accordion-form *ngIf="type === 'accordion'" [form]="content" [documentations]="documentations"></docu-accordion-form>
+        <docu-table-form *ngIf="type === 'table'" [form]="content" [table]="section?.content"></docu-table-form>
+        <docu-image-form *ngIf="type === 'image'" [form]="content"></docu-image-form>
+      </div>
+      <div class="preview" *ngIf="!edit">
+        <docu-section [section]="sectionForm.value"></docu-section>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

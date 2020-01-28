@@ -1,0 +1,70 @@
+:host {
+  margin-bottom: 16px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+mat-card {
+  margin: 0 !important;
+}
+
+mat-card-content {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
+
+mat-card-content > .form {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 320px;
+  align-items: flex-start;
+}
+
+mat-card-content .preview {
+  flex: 1 1 100%;
+  min-width: 320px;
+}
+
+mat-card {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 4px;
+}
+
+.side-controls {
+  flex: 0 0 48px;
+  float: left;
+  clear: both;
+  width: 48px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.section-form {
+  flex: 1 1 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 4px; 
+  box-sizing: border-box;
+  border-radius: 4px;
+  overflow: auto;
+  resize: both;
+}
+
+.type-select {
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}

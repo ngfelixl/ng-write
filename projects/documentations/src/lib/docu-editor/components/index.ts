@@ -1,6 +1,6 @@
 import { EditorComponent } from './editor/editor.component';
 import { SimpleFormComponent } from './simple-form.component';
-import { SectionFormComponent } from './section-form.component';
+import { SectionFormComponent } from './section-form/section-form.component';
 import { CodeFormComponent } from './code-form/code-form.component';
 import { FormHeaderComponent } from './form-header/form-header.component';
 import { TabsFormComponent } from './tabs-form.component';

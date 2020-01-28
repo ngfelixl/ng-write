@@ -6,7 +6,7 @@ import { MaterialModule } from '../lib/docu-editor/material.module';
 
 import { SimpleFormComponent } from '../lib/docu-editor/components/simple-form.component';
 import { CodeFormComponent } from '../lib/docu-editor/components/code-form/code-form.component';
-import { SectionFormComponent } from '../lib/docu-editor/components/section-form.component';
+import { SectionFormComponent } from '../lib/docu-editor/components/section-form/section-form.component';
 import { DocumentationFormComponent } from '../lib/docu-editor/components/documentation-form/documentation-form.component';
 import { TableFormComponent } from '../lib/docu-editor/components/table-form.component';
 import { AccordionFormComponent } from '../lib/docu-editor/components/accordion-form/accordion-form.component';
