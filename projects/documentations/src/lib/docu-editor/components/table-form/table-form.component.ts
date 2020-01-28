@@ -1,43 +1,11 @@
 import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core';
-import { FormGroup, FormArray, FormControl } from '@angular/forms';
-import { Table } from '../../models/section-types';
+import { FormGroup, FormArray, FormControl, AbstractControl } from '@angular/forms';
+import { Table } from '../../../models';
 
 @Component({
   selector: 'docu-table-form',
-  template: `
-    <div [formGroup]="form">
-      <table>
-        <tbody>
-          <tr>
-            <td></td>
-            <td *ngFor="let col of cols">
-              <button type="button" (click)="removeCol(col)">-</button>
-            </td>
-            <td><button type="button" (click)="addCol()">+</button></td>
-          </tr>
-
-          <tr *ngFor="let row of tableRows?.controls; let i = index" [formGroup]="row.get('cols')">
-            <td><button type="button" (click)="removeRow(i)">-</button></td>
-            <td *ngFor="let col of row?.get('cols').controls; let j = index"><input [formControlName]="j"></td>
-          </tr>
-
-          <tr>
-            <td><button type="button" (click)="addRow()">+</button></td>
-          </tr>
-        </tbody>
-      </table>
-      <mat-form-field>
-        <input matInput formControlName="caption" placeholder="Caption">
-      </mat-form-field>
-    </div>
-  `,
-  styles: [`
-    :host { width: 100%; overflow: auto; }
-    table, tr, td { margin: 0; padding: 0; border: 0; outline: 0; cell-spacing: none; }
-    td { border: 1px solid #ccc; text-align: center; }
-    button { background-color: none; border: none; }
-    mat-form-field { width: 100%; margin-top: 8px; }
-  `],
+  templateUrl: './table-form.component.html',
+  styleUrls: [ './table-form.component.css' ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableFormComponent implements OnInit {
@@ -92,11 +60,16 @@ export class TableFormComponent implements OnInit {
       this.tableRows.removeAt(index);
     }
   }
+
   removeCol(index: number) {
     if (this.numCols > 1) {
       for (const row of this.tableRows.controls) {
         (<FormArray>row.get('cols')).removeAt(index);
       }
     }
+  }
+
+  getColControls(row: AbstractControl) {
+    return (row.get('cols') as FormArray).controls;
   }
 }

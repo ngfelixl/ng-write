@@ -6,7 +6,7 @@ import { FormHeaderComponent } from './form-header/form-header.component';
 import { TabsFormComponent } from './tabs-form.component';
 import { DocumentationFormComponent } from './documentation-form/documentation-form.component';
 import { AccordionFormComponent } from './accordion-form/accordion-form.component';
-import { TableFormComponent } from './table-form.component';
+import { TableFormComponent } from './table-form/table-form.component';
 import { ImageFormComponent } from './image-form/image-form.component';
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 

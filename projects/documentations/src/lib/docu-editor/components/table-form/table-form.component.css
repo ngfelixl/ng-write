@@ -1,0 +1,26 @@
+:host {
+  width: 100%;
+  overflow: auto;
+}
+
+table, tr, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+td {
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+button {
+  background-color: none;
+  border: none;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-top: 8px;
+}

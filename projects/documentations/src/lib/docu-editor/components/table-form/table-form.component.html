@@ -1,0 +1,27 @@
+<div [formGroup]="form">
+  <table>
+    <tbody>
+      <tr>
+        <td></td>
+        <td *ngFor="let col of cols">
+          <button type="button" (click)="removeCol(col)">-</button>
+        </td>
+        <td><button type="button" (click)="addCol()">+</button></td>
+      </tr>
+
+      <tr *ngFor="let row of tableRows?.controls; let i = index" [formGroup]="row.get('cols')">
+        <td><button type="button" (click)="removeRow(i)">-</button></td>
+        <td *ngFor="let col of getColControls(row); let j = index">
+          <input [formControlName]="j">
+        </td>
+      </tr>
+
+      <tr>
+        <td><button type="button" (click)="addRow()">+</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <mat-form-field>
+    <input matInput formControlName="caption" placeholder="Caption">
+  </mat-form-field>
+</div>
