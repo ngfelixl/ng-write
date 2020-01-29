@@ -1,8 +1,7 @@
-import { Component, Input, EventEmitter, Output, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
-import { FormGroup, FormControl, FormArray } from '@angular/forms';
-import { Section, Documentation, DocumentationArray } from '../../../models';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { Table } from '../../../models/section-types';
+import { Documentation, DocumentationArray, Section } from '../../../models';
 import { DynamicFormsService } from '../../services/dynamic-forms.service';
 
 
@@ -52,6 +51,6 @@ export class SectionFormComponent implements OnInit, OnDestroy {
   }
 
   isSimple(type: string): boolean {
-    return ['text', 'title', 'citation', 'math'].includes(type);
+    return ['title', 'citation', 'math'].includes(type);
   }
 }

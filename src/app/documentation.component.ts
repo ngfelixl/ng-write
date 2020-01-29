@@ -18,6 +18,10 @@ import { EditorComponent } from 'projects/documentations/src/public_api';
   styles: [`
     :host { display: block; margin: 16px; }
     button { margin: 4px; }
+    docu-editor {
+      display: block;
+      margin: 12px;
+    }
   `]
 })
 export class DocumentationComponent {

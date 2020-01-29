@@ -1,0 +1,20 @@
+:host, textarea {
+  display: block;
+  width: 100%;
+}
+
+textarea {
+  font-size: 18px;
+  line-height: 30px;
+  outline: none;
+  min-height: 120px;
+  border-radius: 4px;
+  padding: 11px;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+textarea:hover {
+  border-color: #ccc;
+}

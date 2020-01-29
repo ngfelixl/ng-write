@@ -1,5 +1,4 @@
-<mat-card>
-  <mat-card-content>
+
     <div [formGroup]="sectionForm" class="form">
       <div class="side-controls">
         <button mat-icon-button (click)="edit = !edit">
@@ -23,6 +22,7 @@
         </button>
       </div>
       <div class="section-form" [class.hidden]="!edit">
+        <docu-text-form *ngIf="type === 'text'" [form]="content"></docu-text-form>
         <docu-simple-form *ngIf="isSimple(type)" [form]="content"></docu-simple-form>
         <docu-code-form *ngIf="type === 'code'" [form]="content"></docu-code-form>
         <docu-tabs-form *ngIf="type === 'tabs'" [form]="content" [documentations]="documentations"></docu-tabs-form>
@@ -34,5 +34,3 @@
         <docu-section [section]="sectionForm.value"></docu-section>
       </div>
     </div>
-  </mat-card-content>
-</mat-card>

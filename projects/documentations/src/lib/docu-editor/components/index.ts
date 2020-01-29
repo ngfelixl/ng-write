@@ -9,6 +9,7 @@ import { AccordionFormComponent } from './accordion-form/accordion-form.componen
 import { TableFormComponent } from './table-form/table-form.component';
 import { ImageFormComponent } from './image-form/image-form.component';
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
+import { TextFormComponent } from './text-form/text-form.component';
 
 export const components: any[] = [
   AccordionFormComponent,
@@ -21,5 +22,6 @@ export const components: any[] = [
   SectionFormComponent,
   SimpleFormComponent,
   TableFormComponent,
-  TabsFormComponent
+  TabsFormComponent,
+  TextFormComponent
 ];
