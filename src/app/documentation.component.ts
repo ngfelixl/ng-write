@@ -29,14 +29,14 @@ export class DocumentationComponent {
 
   documentation = {
     sections: [
-      { type: 'title', content: { text: 'Documentations - The Angular article library' } },
+      { type: 'title', content: { text: 'ngDocs' } },
       { type: 'text', content: { text: `This is a demonstration article constructed and rendered by this library. There are many different section types you can use for your articles, e.g. **title**, **text**, **code**, **math**, **images**, **tables**, **citation**, nested **tabs** and **accordions**. To reorder the sections use the drag-handle next to the *type* input field and drag it to the target position. Press *save* to update the output.`} },
       { type: 'image', content: { imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png', textwidth: 10 } },
       { type: 'text', content: { text: `Some section types have got different *formGroups*, e.g. **title** is just a single textarea, whereas **code** has the inputs \`language\` (dropdown select), \`code\` (textarea) and \`caption\` (input). The following section contains a code demonstration example. (Note that syntax highlighting is in a very early stage and needs more improvements. Feel free to contribute.) As you see there are several inline styles available. These are bold (&#42;&#42;), itallic (&#42;) and code (&#96;).` } },
-      { type: 'code', content: { language: 'typescript', caption: 'This is how to create a basic component in Angular', code: `import { Component } from '@angular/core';
+      { type: 'code', content: { language: 'typescript', caption: 'Example of an Angular component', code: `import { Component } from '@angular/core';
 
 @Component()
-export class; MyComponent; {
+export class MyComponent {
 
 }`}
       },
@@ -177,7 +177,7 @@ export class EntityEffects {
         { title: 'Selectors', sections: [ { type: 'text', content: { text: '(っ◕‿◕)っ give me a hug.' } } ] }
       ] } },
       { type: 'title', content: { text: 'Get in contact' } },
-      { type: 'text', content: { text: `Hi, I am Felix Lemke. If you like that library visit [my personal site](https://felixlemke.com) and/or follow me on
+      { type: 'text', content: { text: `Hi, I am Felix Lemke. If you like that library visit [my personal site](https://felixlemke.dev) and/or follow me on
 [github](https://github.com/ngfelixl)
 [twitter](https://twitter.com/ngfelixl)
 [instagram](https://instagram.com/ngfelixl)` } },
