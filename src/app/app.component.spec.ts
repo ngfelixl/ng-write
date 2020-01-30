@@ -6,7 +6,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DocumentationComponent } from './documentation.component';
 
-import { DocuModule, DocuEditorModule } from '../../projects/documentations/src/public_api';
+import { DocuModule, DocuEditorModule } from '../../projects/ng-write/src/public_api';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {

@@ -1,18 +1,20 @@
-# documentations (for Angular)
+# ngWrite
 
-Article editor and article visualization for Angular. Just property-bind the returned object of the article editor to the article visualization. This library is ready for usage with the Ivy rendering engine at version `9.0.2` and following. See this library in action [here](https://ngfelixl.github.io/documentations).
+Article editor and article visualization for Angular. Just property-bind the returned object of the article editor to the article visualization. This library is ready for usage with the Ivy rendering engine at version `9.0.2` and following. See this library in action [here](https://ngfelixl.github.io/ng-write).
 
-[![Build Status](https://travis-ci.org/ngfelixl/documentations.svg?branch=master)](https://travis-ci.org/ngfelixl/documentations)
-![npm](https://img.shields.io/npm/v/documentations)
+Note: This library has been renamed from *documentations* to *ng-write*.
 
-[![See animation on github](./img/animation_docu.gif)](https://ngfelixl.github.io/documentations)
+[![Build Status](https://travis-ci.org/ngfelixl/ng-write.svg?branch=master)](https://travis-ci.org/ngfelixl/ng-write)
+![npm](https://img.shields.io/npm/v/ng-write)
+
+[![See animation on github](./img/animation_docu.gif)](https://ngfelixl.github.io/ng-write)
 
 ## Installation
 
 Add the package to your angular project using
 
 ```bash
-npm install documentations
+npm install ng-write
 ```
 
 ## The Editor

@@ -1,12 +1,12 @@
 {
-  "name": "ng-docs",
+  "name": "ng-write",
   "version": "9.2.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build:docs": "ng build --prod",
-    "build:documentations": "ng build documentations --prod",
-    "publish": "cd dist/documentations && npm publish",
+    "build:ng-write": "ng build ng-write --prod",
+    "publish": "cd dist/ng-write && npm publish",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -18,7 +18,8 @@
     "library",
     "documentations",
     "editor",
-    "render"
+    "render",
+    "article"
   ],
   "dependencies": {
     "@angular/animations": "^9.0.0-rc.11",

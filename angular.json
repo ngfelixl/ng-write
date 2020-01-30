@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lib-documentations": {
+    "docs": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "lib-documentations:build"
+            "browserTarget": "docs:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "lib-documentations:build:production"
+              "browserTarget": "docs:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lib-documentations:build"
+            "browserTarget": "docs:build"
           }
         },
         "test": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "lib-documentations-e2e": {
+    "docs-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "lib-documentations:serve"
+            "devServerTarget": "docs:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "lib-documentations:serve:production"
+              "devServerTarget": "docs:serve:production"
             }
           }
         },
@@ -134,38 +134,38 @@
         }
       }
     },
-    "documentations": {
-      "root": "projects/documentations",
-      "sourceRoot": "projects/documentations/src",
+    "ng-write": {
+      "root": "projects/ng-write",
+      "sourceRoot": "projects/ng-write/src",
       "projectType": "library",
       "prefix": "docu",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/documentations/tsconfig.lib.json",
-            "project": "projects/documentations/ng-package.json"
+            "tsConfig": "projects/ng-write/tsconfig.lib.json",
+            "project": "projects/ng-write/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/documentations/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ng-write/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/documentations/src/test.ts",
-            "tsConfig": "projects/documentations/tsconfig.spec.json",
-            "karmaConfig": "projects/documentations/karma.conf.js"
+            "main": "projects/ng-write/src/test.ts",
+            "tsConfig": "projects/ng-write/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-write/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/documentations/tsconfig.lib.json",
-              "projects/documentations/tsconfig.spec.json"
+              "projects/ng-write/tsconfig.lib.json",
+              "projects/ng-write/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -175,5 +175,5 @@
       }
     }
   },
-  "defaultProject": "lib-documentations"
+  "defaultProject": "docs"
 }

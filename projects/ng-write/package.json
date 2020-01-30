@@ -1,5 +1,5 @@
 {
-  "name": "documentations",
+  "name": "ng-write",
   "version": "9.2.0",
   "author": {
     "name": "Felix Lemke",
@@ -19,12 +19,12 @@
     "syntaxhighlighting"
   ],
   "license": "BSD-3",
-  "homepage": "https://ngfelixl.github.io/documentations",
+  "homepage": "https://ngfelixl.github.io/ng-write",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ngfelixl/documentations/"
+    "url": "https://github.com/ngfelixl/ng-write/"
   },
-  "bugs": "https://github.com/ngfelixl/documentations/issues",
+  "bugs": "https://github.com/ngfelixl/ng-write/issues",
   "peerDependencies": {
     "@angular/common": "^9.0.0",
     "@angular/core": "^9.0.0",
