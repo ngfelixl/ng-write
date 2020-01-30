@@ -2,7 +2,7 @@
 
 Write articles, easy and nice. With a one-liner for the editor and a one-liner for the visualisation.
 Read the library [documentation](https://github.com/ngfelixl/ng-write/blob/master/projects/ng-write/README.md) or
-have your [hands on](https://ngfelixl/github.io/ng-write).
+have your [hands on](https://ngfelixl.github.io/ng-write).
 
 ## Development server
 
