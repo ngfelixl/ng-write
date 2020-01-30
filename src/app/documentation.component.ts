@@ -1,5 +1,5 @@
 import { Component, ChangeDetectorRef, ViewChild } from '@angular/core';
-import { EditorComponent } from 'projects/ng-docs/src/public_api';
+import { EditorComponent } from 'projects/ng-write/src/public_api';
 
 @Component({
   selector: 'app-documentation',

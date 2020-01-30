@@ -8,7 +8,7 @@ install:
  - npm install
 script:
  - ng test docs --watch=false --progress=false
- - ng test ng-docs --watch=false --progress=false
+ - ng test ng-write --watch=false --progress=false
 
 before_script:
   - npm install -g @angular/cli

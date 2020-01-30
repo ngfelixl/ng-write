@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { DocuModule, DocuEditorModule } from '../../projects/ng-docs/src/public_api';
+import { DocuModule, DocuEditorModule } from '../../projects/ng-write/src/public_api';
 
 @NgModule({
   declarations: [

@@ -1,12 +1,12 @@
 {
-  "name": "ng-docs",
+  "name": "ng-write",
   "version": "9.2.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build:docs": "ng build --prod",
-    "build:ng-docs": "ng build ng-docs --prod",
-    "publish": "cd dist/ng-docs && npm publish",
+    "build:ng-write": "ng build ng-write --prod",
+    "publish": "cd dist/ng-write && npm publish",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
