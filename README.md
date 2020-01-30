@@ -1,6 +1,6 @@
 # LibDocumentation
 
-Read the library [documentation](https://github.com/ngfelixl/documentations/blob/master/projects/documentations/README.md).
+Read the library [documentation](https://github.com/ngfelixl/ng-docs/blob/master/projects/ng-docs/README.md).
 
 ## Development server
 
@@ -17,7 +17,7 @@ npm run build:docs
 To build the library run
 
 ```
-npm run build:documentations
+npm run build:ng-docs
 ```
 
 ## Running unit tests

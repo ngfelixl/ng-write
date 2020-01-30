@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build:docs": "ng build --prod",
-    "build:documentations": "ng build documentations --prod",
-    "publish": "cd dist/documentations && npm publish",
+    "build:ng-docs": "ng build ng-docs --prod",
+    "publish": "cd dist/ng-docs && npm publish",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -18,7 +18,8 @@
     "library",
     "documentations",
     "editor",
-    "render"
+    "render",
+    "article"
   ],
   "dependencies": {
     "@angular/animations": "^9.0.0-rc.11",

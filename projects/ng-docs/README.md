@@ -1,18 +1,18 @@
-# documentations (for Angular)
+# ngDocs
 
-Article editor and article visualization for Angular. Just property-bind the returned object of the article editor to the article visualization. This library is ready for usage with the Ivy rendering engine at version `9.0.2` and following. See this library in action [here](https://ngfelixl.github.io/documentations).
+Article editor and article visualization for Angular. Just property-bind the returned object of the article editor to the article visualization. This library is ready for usage with the Ivy rendering engine at version `9.0.2` and following. See this library in action [here](https://ngfelixl.github.io/ng-docs).
 
-[![Build Status](https://travis-ci.org/ngfelixl/documentations.svg?branch=master)](https://travis-ci.org/ngfelixl/documentations)
-![npm](https://img.shields.io/npm/v/documentations)
+[![Build Status](https://travis-ci.org/ngfelixl/ng-docs.svg?branch=master)](https://travis-ci.org/ngfelixl/ng-docs)
+![npm](https://img.shields.io/npm/v/ng-docs)
 
-[![See animation on github](./img/animation_docu.gif)](https://ngfelixl.github.io/documentations)
+[![See animation on github](./img/animation_docu.gif)](https://ngfelixl.github.io/ng-docs)
 
 ## Installation
 
 Add the package to your angular project using
 
 ```bash
-npm install documentations
+npm install ng-docs
 ```
 
 ## The Editor

@@ -7,8 +7,8 @@ node_js :
 install:
  - npm install
 script:
- - ng test lib-documentations --watch=false --progress=false
- - ng test documentations --watch=false --progress=false
+ - ng test docs --watch=false --progress=false
+ - ng test ng-docs --watch=false --progress=false
 
 before_script:
   - npm install -g @angular/cli
