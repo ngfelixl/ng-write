@@ -1,6 +1,8 @@
-# LibDocumentation
+# ng-docs
 
-Read the library [documentation](https://github.com/ngfelixl/ng-docs/blob/master/projects/ng-docs/README.md).
+Write articles, easy and nice. With a one-liner for the editor and a one-liner for the visualisation.
+Read the library [documentation](https://github.com/ngfelixl/ng-docs/blob/master/projects/ng-docs/README.md) or
+have your [hands on](https://ngfelixl/github.io/ng-docs).
 
 ## Development server
 
