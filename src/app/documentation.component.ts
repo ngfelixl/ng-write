@@ -33,7 +33,7 @@ export class DocumentationComponent {
 
   documentation = {
     sections: [
-      { type: 'title', content: { text: 'ngDocs' } },
+      { type: 'title', content: { text: 'ngWrite' } },
       { type: 'text', content: { text: `This is a demonstration article constructed and rendered by this library. There are many different section types you can use for your articles, e.g. **title**, **text**, **code**, **math**, **images**, **tables**, **citation**, nested **tabs** and **accordions**. To reorder the sections use the drag-handle next to the *type* input field and drag it to the target position. Press *save* to update the output.`} },
       { type: 'image', content: { imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png', textwidth: 10 } },
       { type: 'text', content: { text: `Some section types have got different *formGroups*, e.g. **title** is just a single textarea, whereas **code** has the inputs \`language\` (dropdown select), \`code\` (textarea) and \`caption\` (input). The following section contains a code demonstration example. (Note that syntax highlighting is in a very early stage and needs more improvements. Feel free to contribute.) As you see there are several inline styles available. These are bold (&#42;&#42;), itallic (&#42;) and code (&#96;).` } },
@@ -49,9 +49,9 @@ export class MyComponent {
         { title: 'Usage', sections: [
           { type: 'title', content: { text: 'Render a documentation' }},
           { type: 'text', content: { text: `At first install all necessary dependencies by the following *npm* command.` } },
-          { type: 'code', content: { code: `npm i documentations
+          { type: 'code', content: { code: `npm i ng-write
 # or
-yarn add documentations` } },
+yarn add ng-write` } },
           { type: 'text', content: { text: 'Import all necessary dependencies in your angular module. If you just need rendering import only `DocuModule`.' } },
           { type: 'code', content: { language: 'typescript', caption: 'Import modules', code: `import { DocuModule, DocuEditorModule } from '../../projects/documentations/src/public_api';
 

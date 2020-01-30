@@ -1,6 +1,8 @@
-# ngDocs
+# ngWrite
 
 Article editor and article visualization for Angular. Just property-bind the returned object of the article editor to the article visualization. This library is ready for usage with the Ivy rendering engine at version `9.0.2` and following. See this library in action [here](https://ngfelixl.github.io/ng-write).
+
+Note: This library has been renamed from *documentations* to *ng-write*.
 
 [![Build Status](https://travis-ci.org/ngfelixl/ng-write.svg?branch=master)](https://travis-ci.org/ngfelixl/ng-write)
 ![npm](https://img.shields.io/npm/v/ng-write)
