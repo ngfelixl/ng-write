@@ -1,11 +1,16 @@
 # ngWrite
 
+[![Build Status](https://travis-ci.org/ngfelixl/ng-write.svg?branch=master)](https://travis-ci.org/ngfelixl/ng-write)
+![npm](https://img.shields.io/npm/v/ng-write)
+![dependencies](https://img.shields.io/librariesio/release/npm/ng-write)
+![downloads documentations](https://img.shields.io/npm/dt/documentations?label=documentations)
+![downloads ng-write](https://img.shields.io/npm/dt/ng-write?label=ng-write)
+[![website](https://img.shields.io/website?url=https%3A%2F%2Fngfelixl.github.io%2Fng-write)](https://ngfelixl.github.io/ng-write)
+
 Article editor and article visualization for Angular. Just property-bind the returned object of the article editor to the article visualization. This library is ready for usage with the Ivy rendering engine at version `9.0.2` and following. See this library in action [here](https://ngfelixl.github.io/ng-write).
 
 Note: This library has been renamed from *documentations* to *ng-write*.
 
-[![Build Status](https://travis-ci.org/ngfelixl/ng-write.svg?branch=master)](https://travis-ci.org/ngfelixl/ng-write)
-![npm](https://img.shields.io/npm/v/ng-write)
 
 [![Animation (View on Github)](https://raw.githubusercontent.com/ngfelixl/ng-write/master/img/animation.gif)](https://raw.githubusercontent.com/ngfelixl/ng-write/master/img/animation.gif)
 
@@ -31,7 +36,7 @@ export class ApplicationModule {}
 The module provides a complete form with live rendering. It should integrate with your **@angular/material** configuration. In the template simply use the editor tag to create a complete form for the article.
 
 ```html
-<docu-editor (save)="saveDoc($event)"></docu-editor>
+<docu-editor (save)="doc = $event"></docu-editor>
 ```
 
 In the component you can define a function to handle the `save` event. For example like:
@@ -40,10 +45,6 @@ In the component you can define a function to handle the `save` event. For examp
 @Component({...})
 export class AppComponent {
   doc: Documentation;
-
-  saveDoc(doc: Documentation) {
-    this.doc = doc;
-  }
 }
 ```
 
