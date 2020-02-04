@@ -15,13 +15,13 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 To build the docs page run
 
 ```
-npm run build:docs
+npm run build docs
 ```
 
 To build the library run
 
 ```
-npm run build:ng-write
+npm run build ng-write
 ```
 
 ## Running unit tests

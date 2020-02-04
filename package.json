@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build:docs": "ng build --prod",
-    "build:ng-write": "ng build ng-write --prod",
+    "build": "ng build --prod",
     "publish": "cd dist/ng-write && npm publish",
     "test": "ng test",
     "lint": "ng lint",
