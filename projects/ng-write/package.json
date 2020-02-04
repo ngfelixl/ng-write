@@ -1,6 +1,6 @@
 {
   "name": "ng-write",
-  "version": "9.2.1",
+  "version": "9.2.2",
   "author": {
     "name": "Felix Lemke",
     "email": "flemke.dev@gmail.com",
@@ -16,7 +16,9 @@
     "tables",
     "tabs",
     "accordion",
-    "syntaxhighlighting"
+    "syntaxhighlighting",
+    "write",
+    "articles"
   ],
   "license": "BSD-3",
   "homepage": "https://ngfelixl.github.io/ng-write",
