@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ArticleComponent } from './article.component';
 import { SectionComponent } from '../../shared/components/section.component';
-import { CodeComponent } from '../../shared/components/code.component';
+import { CodeComponent } from '../../shared/components/code/code.component';
 import { TextComponent } from '../../shared/components/text.component';
 import { TitleComponent } from '../../shared/components/title.component';
 import { SyntaxPipe } from '../../shared/pipes/syntax.pipe';
