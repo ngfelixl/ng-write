@@ -7,7 +7,7 @@ Note: This library has been renamed from *documentations* to *ng-write*.
 [![Build Status](https://travis-ci.org/ngfelixl/ng-write.svg?branch=master)](https://travis-ci.org/ngfelixl/ng-write)
 ![npm](https://img.shields.io/npm/v/ng-write)
 
-[![See animation on github](./img/animation_docu.gif)](https://ngfelixl.github.io/ng-write)
+[![Animation (View on Github)](https://raw.githubusercontent.com/ngfelixl/ng-write/master/img/animation.gif)](https://raw.githubusercontent.com/ngfelixl/ng-write/master/img/animation.gif)
 
 ## Installation
 

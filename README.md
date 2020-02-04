@@ -4,6 +4,8 @@ Write articles, easy and nice. With a one-liner for the editor and a one-liner f
 Read the library [documentation](https://github.com/ngfelixl/ng-write/blob/master/projects/ng-write/README.md) or
 have your [hands on](https://ngfelixl.github.io/ng-write).
 
+[![Animation (View on Github)](https://raw.githubusercontent.com/ngfelixl/ng-write/master/img/animation.gif)](https://raw.githubusercontent.com/ngfelixl/ng-write/master/img/animation.gif)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -13,13 +15,13 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 To build the docs page run
 
 ```
-npm run build:docs
+npm run build docs
 ```
 
 To build the library run
 
 ```
-npm run build:ng-write
+npm run build ng-write
 ```
 
 ## Running unit tests
