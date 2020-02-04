@@ -25,7 +25,7 @@ describe('SyntaxPipe', () => {
       const pipe = new SyntaxPipe(mockDomSanitizer);
 
       expect(pipe.transform('@Component() class', 'typescript'))
-        .toEqual(`<span style="color: ${typescript.decorators};">@Component</span>() <span style="color: ${colors.blue};">class</span>`);
+        .toEqual(`<span style="color: ${typescript.decorators};">@Component(</span>) <span style="color: ${colors.blue};">class</span>`);
     });
   });
 });

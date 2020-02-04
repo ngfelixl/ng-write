@@ -7,8 +7,8 @@ node_js :
 install:
  - npm install
 script:
- - ng test docs --watch=false --progress=false
- - ng test ng-write --watch=false --progress=false
-
-before_script:
-  - npm install -g @angular/cli
+ - npm run lint
+ - npm run test docs --watch=false --progress=false
+ - npm run test ng-write --watch=false --progress=false
+ - npm run build docs 
+ - npm run build ng-write
