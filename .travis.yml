@@ -8,7 +8,7 @@ install:
  - npm install
 script:
  - npm run lint
- - npm run test docs --watch=false --progress=false
- - npm run test ng-write --watch=false --progress=false
+ - npm run test docs -- --watch=false --progress=false
+ - npm run test ng-write -- --watch=false --progress=false
  - npm run build docs 
  - npm run build ng-write
