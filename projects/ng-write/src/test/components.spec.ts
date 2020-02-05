@@ -14,6 +14,7 @@ import { TabsComponent } from '../lib/shared/components/tabs.component';
 import { MaterialModule } from '../lib/shared/material.module';
 import { TableComponent } from '../lib/shared/components/table.component';
 import { ImageComponent } from '../lib/shared/components/image.component';
+import { HtmlComponent } from '../lib/shared/components/html/html.component';
 
 beforeEach(async(() => {
   TestBed.configureTestingModule({
@@ -27,6 +28,7 @@ beforeEach(async(() => {
       SectionComponent,
       CodeComponent,
       MathComponent,
+      HtmlComponent,
       TextComponent,
       TitleComponent,
       SyntaxPipe,

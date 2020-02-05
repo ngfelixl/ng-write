@@ -18,7 +18,7 @@ export class SectionFormComponent implements OnInit, OnDestroy {
   type: string;
   subscription: Subscription;
   edit = false;
-  types = ['text', 'title', 'citation', 'math', 'code', 'tabs', 'accordion', 'table', 'image'];
+  types = ['text', 'title', 'citation', 'math', 'html', 'code', 'tabs', 'accordion', 'table', 'image'];
 
   constructor(private dynamicForms: DynamicFormsService) {}
 

@@ -1,0 +1,8 @@
+<ng-container [formGroup]="form">
+  <textarea
+    formControlName="text"
+    placeholder="Place your HTML code here"
+    onfocus='this.style.height = this.scrollHeight + "px"'
+    oninput='this.style.height = this.scrollHeight + "px"'>
+  </textarea>
+</ng-container>

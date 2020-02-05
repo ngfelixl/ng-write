@@ -180,8 +180,31 @@ export class EntityEffects {
         ] },
         { title: 'Selectors', sections: [ { type: 'text', content: { text: '(っ◕‿◕)っ give me a hug.' } } ] }
       ] } },
+      { type: 'title', content: { text: 'Use your html' }},
+      { type: 'html', content: { text: `<style>
+  .animated {
+    padding: 20px;
+    width: 400px;
+    background-color: rgb(63, 81, 181);
+    border-radius: 16px;
+    color: white;
+    margin: auto;
+    animation-name:animation1;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+  }
+  @keyframes animation1 {
+    0% { transform: rotate(-5deg) scale(1); }
+    50% { transform: rotate(5deg) scale(0.9); }
+    75% { transform: rotate(2deg) scale(1)}
+    100% { transform: rotate(-5deg) scale(1.02); }
+  }
+</style>
+<div class="animated">Hey! I am an animated html block written with the <b>ng-write html editor</b>. If you want to improve this animation, please send a PR.</div>`}},
       { type: 'title', content: { text: 'Get in contact' } },
-      { type: 'text', content: { text: `Hi, I am Felix Lemke. If you like that library visit [my personal site](https://felixlemke.dev) and/or follow me on
+      { type: 'html', content: { text: '<img src="https://avatars.githubusercontent.com/ngfelixl" width="120" style="border-radius: 50%"/>'}},
+      { type: 'text', content: { text: `Hi, I am Felix Lemke, Senior Software Engineer mainly working with Angular and other Web-Technologies. If you like that library visit [my personal site](https://felixlemke.dev) and/or follow me on
 [github](https://github.com/ngfelixl)
 [twitter](https://twitter.com/ngfelixl)
 [instagram](https://instagram.com/ngfelixl)` } },

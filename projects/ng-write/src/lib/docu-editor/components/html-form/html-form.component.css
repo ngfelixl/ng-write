@@ -1,0 +1,25 @@
+textarea {
+  font-family: monospace;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 16px;
+  line-height: 24px;
+  min-height: 120px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  transition:
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+}
+
+textarea:hover {
+  background-color: #f6f6f6;
+  border-color: #999999;
+}
+
+textarea:focus {
+  background-color: #efefef;
+  border-color: #888888;
+}

@@ -4,6 +4,10 @@ export interface Code {
   caption?: string;
 }
 
+export interface Html {
+  text: string;
+}
+
 export interface Text {
   text: string;
 }

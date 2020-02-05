@@ -25,6 +25,7 @@
         <docu-text-form *ngIf="type === 'text'" [form]="content"></docu-text-form>
         <docu-simple-form *ngIf="isSimple(type)" [form]="content"></docu-simple-form>
         <docu-code-form *ngIf="type === 'code'" [form]="content"></docu-code-form>
+        <docu-html-form *ngIf="type === 'html'" [form]="content"></docu-html-form>
         <docu-tabs-form *ngIf="type === 'tabs'" [form]="content" [documentations]="documentations"></docu-tabs-form>
         <docu-accordion-form *ngIf="type === 'accordion'" [form]="content" [documentations]="documentations"></docu-accordion-form>
         <docu-table-form *ngIf="type === 'table'" [form]="content" [table]="section?.content"></docu-table-form>
