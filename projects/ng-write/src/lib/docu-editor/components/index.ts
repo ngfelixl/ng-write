@@ -10,6 +10,7 @@ import { TableFormComponent } from './table-form/table-form.component';
 import { ImageFormComponent } from './image-form/image-form.component';
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 import { TextFormComponent } from './text-form/text-form.component';
+import { HtmlFormComponent } from './html-form/html-form.component';
 
 export const components: any[] = [
   AccordionFormComponent,
@@ -17,6 +18,7 @@ export const components: any[] = [
   DocumentationFormComponent,
   EditorComponent,
   FormHeaderComponent,
+  HtmlFormComponent,
   ImageDialogComponent,
   ImageFormComponent,
   SectionFormComponent,

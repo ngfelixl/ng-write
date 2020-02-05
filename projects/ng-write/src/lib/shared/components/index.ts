@@ -9,12 +9,14 @@ import { ContainerComponent } from './container.component';
 import { AccordionComponent } from './accordion.component';
 import { TableComponent } from './table.component';
 import { ImageComponent } from './image.component';
+import { HtmlComponent } from './html/html.component';
 
 export const components: any[] = [
   AccordionComponent,
   CodeComponent,
   ContainerComponent,
   CitationComponent,
+  HtmlComponent,
   ImageComponent,
   MathComponent,
   SectionComponent,
