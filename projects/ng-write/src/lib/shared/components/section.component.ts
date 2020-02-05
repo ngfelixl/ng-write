@@ -3,7 +3,7 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 @Component({
   selector: 'docu-section',
   template: `
-  <ng-container [ngSwitch]="section.type">
+  <ng-container [ngSwitch]="section?.type">
     <docu-title *ngSwitchCase="'title'">{{section?.content.text}}</docu-title>
     <docu-text *ngSwitchCase="'text'" [content]="section?.content"></docu-text>
     <docu-code *ngSwitchCase="'code'" [code]="section?.content"></docu-code>

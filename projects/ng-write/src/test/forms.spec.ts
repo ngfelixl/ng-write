@@ -18,6 +18,7 @@ import { By } from '@angular/platform-browser';
 import { ImageFormComponent } from '../lib/docu-editor/components/image-form/image-form.component';
 import { ImageDialogComponent } from '../lib/docu-editor/components/image-dialog/image-dialog.component';
 import { ImagesService } from '../lib/docu-editor/services/images.service';
+import { HtmlFormComponent } from '../lib/docu-editor/components/html-form/html-form.component';
 
 beforeEach(async(() => {
   TestBed.configureTestingModule({
@@ -30,6 +31,7 @@ beforeEach(async(() => {
       FormHeaderComponent,
       ImageDialogComponent,
       ImageFormComponent,
+      HtmlFormComponent,
       AccordionFormComponent,
       CodeFormComponent,
       SimpleFormComponent,
