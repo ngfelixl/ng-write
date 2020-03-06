@@ -1,6 +1,6 @@
 {
   "name": "ng-write",
-  "version": "9.3.1",
+  "version": "9.3.2",
   "author": {
     "name": "Felix Lemke",
     "email": "flemke.dev@gmail.com",
@@ -28,9 +28,9 @@
   },
   "bugs": "https://github.com/ngfelixl/ng-write/issues",
   "peerDependencies": {
-    "@angular/common": "^9.0.0",
-    "@angular/core": "^9.0.0",
-    "@angular/material": "^9.0.0",
+    "@angular/common": "^9.0.5",
+    "@angular/core": "^9.0.5",
+    "@angular/material": "^9.1.1",
     "katex": "^0.11.1"
   }
 }
