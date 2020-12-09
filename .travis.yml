@@ -3,7 +3,7 @@ addons:
   chrome: stable
 language : node_js
 node_js :
- - stable
+ - 14
 install:
  - npm install
 script:
