@@ -1,6 +1,6 @@
 {
   "name": "ng-write",
-  "version": "9.3.2",
+  "version": "11.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
