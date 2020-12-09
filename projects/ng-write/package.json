@@ -27,6 +27,9 @@
     "url": "https://github.com/ngfelixl/ng-write/"
   },
   "bugs": "https://github.com/ngfelixl/ng-write/issues",
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
   "peerDependencies": {
     "@angular/common": "^9.0.5",
     "@angular/core": "^9.0.5",
