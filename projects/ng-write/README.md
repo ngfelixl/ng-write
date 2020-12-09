@@ -1,6 +1,6 @@
 # ngWrite
 
-[![Build Status](https://travis-ci.org/ngfelixl/ng-write.svg?branch=master)](https://travis-ci.org/ngfelixl/ng-write)
+[![Build Status](https://img.shields.io/github/workflow/status/ngfelixl/ng-write/Node.js%20CI)](https://github.com/ngfelixl/ng-write/actions?query=workflow%3A%22Node.js+CI%22)
 ![npm](https://img.shields.io/npm/v/ng-write)
 ![dependencies](https://img.shields.io/librariesio/release/npm/ng-write)
 ![downloads documentations](https://img.shields.io/npm/dt/documentations?label=documentations)
