@@ -3,15 +3,15 @@
     <tbody>
       <tr>
         <td></td>
-        <td *ngFor="let col of cols">
+        <td *ngFor="let col of cols; trackBy">
           <button type="button" (click)="removeCol(col)">-</button>
         </td>
         <td><button type="button" (click)="addCol()">+</button></td>
       </tr>
 
-      <tr *ngFor="let row of tableRows?.controls; let i = index" [formGroup]="row.get('cols')">
+      <tr *ngFor="let row of tableRows?.controls; let i = index; trackBy" [formGroup]="row.get('cols')">
         <td><button type="button" (click)="removeRow(i)">-</button></td>
-        <td *ngFor="let col of getColControls(row); let j = index">
+        <td *ngFor="let col of getColControls(row); let j = index; trackBy">
           <input [formControlName]="j">
         </td>
       </tr>

@@ -10,7 +10,7 @@ import { Config } from '../../models/config';
   selector: 'docu-article',
   template: `
     <article>
-      <docu-section *ngFor="let section of documentation?.sections" [section]="section"></docu-section>
+      <docu-section *ngFor="let section of documentation?.sections; trackBy: trackByIndex" [section]="section"></docu-section>
     </article>
   `
 })
@@ -32,5 +32,9 @@ export class ArticleComponent implements OnInit {
       };
       this.updateMetaService.update(meta);
     }
+  }
+
+  trackByIndex(index: number) {
+    return index;
   }
 }

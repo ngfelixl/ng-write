@@ -10,7 +10,7 @@ import { SectionFormComponent } from '../lib/docu-editor/components/section-form
 import { DocumentationFormComponent } from '../lib/docu-editor/components/documentation-form/documentation-form.component';
 import { TableFormComponent } from '../lib/docu-editor/components/table-form/table-form.component';
 import { AccordionFormComponent } from '../lib/docu-editor/components/accordion-form/accordion-form.component';
-import { TabsFormComponent } from '../lib/docu-editor/components/tabs-form.component';
+import { TabsFormComponent } from '../lib/docu-editor/components/tabs-form/tabs-form.component';
 import { FormHeaderComponent } from '../lib/docu-editor/components/form-header/form-header.component';
 import { DynamicFormsService } from '../lib/docu-editor/services/dynamic-forms.service';
 import { EditorComponent } from '../lib/docu-editor/components/editor/editor.component';

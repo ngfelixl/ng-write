@@ -72,4 +72,8 @@ export class TableFormComponent implements OnInit {
   getColControls(row: AbstractControl) {
     return (row.get('cols') as FormArray).controls;
   }
+
+  trackBy(index: number) {
+    return index;
+  }
 }

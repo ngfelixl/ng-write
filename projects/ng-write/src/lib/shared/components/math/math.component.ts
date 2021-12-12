@@ -5,11 +5,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 @Component({
   selector: 'docu-math',
   template: `<div [innerHTML]="expression"></div>`,
-  styles: [`
-    :host { display: block; overflow-x: auto; font-size: 18px; }
-    :host /deep/ .katex-mathml { position: fixed; }
-    div { display: block; padding: 8px 0; text-align: center; white-space: nowrap; }
-  `],
+  styleUrls: ['./math.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MathComponent {
@@ -19,7 +15,6 @@ export class MathComponent {
 
   get expression(): SafeHtml {
     try {
-      // return renderToString(this.math);
       return this.sanitizer.bypassSecurityTrustHtml(renderToString(this.math));
     } catch (e) {
       return '';

@@ -1,0 +1,6 @@
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let panel of panels; trackBy">
+    <mat-expansion-panel-header><mat-panel-title>{{panel.title}}</mat-panel-title></mat-expansion-panel-header>
+    <docu-container [documentation]="panel"></docu-container>
+  </mat-expansion-panel>
+</mat-accordion>

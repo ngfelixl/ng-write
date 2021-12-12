@@ -7,7 +7,7 @@ import { Documentation } from '../../models';
     <mat-card class="tab-card">
       <mat-card-content>
         <mat-tab-group>
-          <mat-tab *ngFor="let tab of tabs">
+          <mat-tab *ngFor="let tab of tabs; trackBy: trackByIndex">
             <ng-template mat-tab-label>{{tab.title}}</ng-template>
             <docu-container [documentation]="tab"></docu-container>
           </mat-tab>
@@ -22,4 +22,8 @@ import { Documentation } from '../../models';
 })
 export class TabsComponent {
   @Input() tabs: Documentation[];
+
+  trackByIndex(index: number) {
+    return index;
+  }
 }

@@ -1,27 +1,11 @@
 import { Component, Input, ChangeDetectionStrategy, OnInit } from '@angular/core';
 import { FormGroup, FormArray, FormControl } from '@angular/forms';
-import { Documentation } from '../../models';
-import { DynamicFormsService } from '../services/dynamic-forms.service';
+import { Documentation } from '../../../models';
+import { DynamicFormsService } from '../../services/dynamic-forms.service';
 
 @Component({
   selector: 'docu-tabs-form',
-  template: `
-    <div [formGroup]="form">
-      <mat-tab-group formArrayName="documentations">
-        <mat-tab *ngFor="let documentationForm of documentationsForm?.controls; let i = index">
-          <ng-template mat-tab-label>{{documentationForm.value.title}}</ng-template>
-          <docu-documentation-form [form]="documentationForm" [documentation]="getDocumentation(i)">
-          </docu-documentation-form>
-        </mat-tab>
-        <mat-tab label="+ Add" (click)="addTab($event)">
-          <mat-form-field>
-            <input matInput placeholder="Tab label" #title>
-          </mat-form-field>
-          <button type="button" mat-flat-button color="accent" (click)="addTab(title.value)">Create Tab</button>
-        </mat-tab>
-      </mat-tab-group>
-    </div>
-  `,
+  templateUrl: './tabs-form.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TabsFormComponent implements OnInit {
@@ -37,7 +21,7 @@ export class TabsFormComponent implements OnInit {
   }
 
   get documentationsForm() { return this.form.get('documentations') as FormArray; }
-  getDocumentation(index) {
+  getDocumentation(index: number) {
     return this.documentations && this.documentations[index] ? this.documentations[index] : null;
   }
 
@@ -69,5 +53,9 @@ export class TabsFormComponent implements OnInit {
     } else {
       this.form.setControl('documentations', new FormArray([]));
     }
+  }
+
+  trackByIndex(index: number) {
+    return index;
   }
 }

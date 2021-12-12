@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  overflow-x: auto;
+  font-size: 18px;
+}
+:host ::ng-deep .katex-mathml {
+  position: fixed;
+}
+div {
+  display: block;
+  padding: 8px 0;
+  text-align: center;
+  white-space: nowrap;
+}

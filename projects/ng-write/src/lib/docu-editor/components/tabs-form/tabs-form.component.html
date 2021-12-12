@@ -1,0 +1,15 @@
+<div [formGroup]="form">
+  <mat-tab-group formArrayName="documentations">
+    <mat-tab *ngFor="let documentationForm of documentationsForm?.controls; trackBy: trackByIndex; let i = index">
+      <ng-template mat-tab-label>{{documentationForm.value.title}}</ng-template>
+      <docu-documentation-form [form]="documentationForm" [documentation]="getDocumentation(i)">
+      </docu-documentation-form>
+    </mat-tab>
+    <mat-tab label="+ Add" (click)="addTab($event)">
+      <mat-form-field>
+        <input matInput placeholder="Tab label" #title>
+      </mat-form-field>
+      <button type="button" mat-flat-button color="accent" (click)="addTab(title.value)">Create Tab</button>
+    </mat-tab>
+  </mat-tab-group>
+</div>

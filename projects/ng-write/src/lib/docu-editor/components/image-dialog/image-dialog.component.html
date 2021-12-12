@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>Select an image</h2>
+<mat-dialog-content>
+  <div class="images-container" *ngIf="data">
+    <div
+      #imgbox
+      class="image-box"
+      *ngFor="let image of data"
+      (click)="select(image)"
+      [class.selected]="selected === image">
+      <img [src]="image">
+    </div>
+  </div>
+  <h3 *ngIf="!data">No images available</h3>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="selected" cdkFocusInitial>Select</button>
+</mat-dialog-actions>

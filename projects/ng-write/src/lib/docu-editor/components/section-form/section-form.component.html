@@ -12,7 +12,7 @@
           <mat-icon>list</mat-icon>
         </button>
         <mat-menu #typeSelect="matMenu">
-          <button *ngFor="let type of types" mat-menu-item class="type-select" (click)="typeControl.setValue(type)">{{type}}</button>
+          <button *ngFor="let type of types; trackBy: trackByValue" mat-menu-item class="type-select" (click)="typeControl.setValue(type)">{{type}}</button>
         </mat-menu>
         <button *ngIf="edit" type="button" mat-icon-button (click)="action.emit('delete')" matTooltip="Delete this section">
           <mat-icon>delete</mat-icon>

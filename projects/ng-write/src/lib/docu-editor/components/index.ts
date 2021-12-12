@@ -3,7 +3,7 @@ import { SimpleFormComponent } from './simple-form.component';
 import { SectionFormComponent } from './section-form/section-form.component';
 import { CodeFormComponent } from './code-form/code-form.component';
 import { FormHeaderComponent } from './form-header/form-header.component';
-import { TabsFormComponent } from './tabs-form.component';
+import { TabsFormComponent } from './tabs-form/tabs-form.component';
 import { DocumentationFormComponent } from './documentation-form/documentation-form.component';
 import { AccordionFormComponent } from './accordion-form/accordion-form.component';
 import { TableFormComponent } from './table-form/table-form.component';
