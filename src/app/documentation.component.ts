@@ -2,7 +2,7 @@ import { Component, ChangeDetectorRef, ViewChild } from '@angular/core';
 import { EditorComponent } from 'projects/ng-write/src/public_api';
 
 @Component({
-  selector: 'app-documentation',
+  selector: 'docu-documentation',
   template: `
     <mat-tab-group color="accent">
       <mat-tab label="Document"><docu-article [documentation]="documentation"></docu-article></mat-tab>
