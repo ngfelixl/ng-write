@@ -11,7 +11,6 @@ import { Documentation } from '../../models';
       </mat-expansion-panel>
     </mat-accordion>
   `,
-  styles: [``],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AccordionComponent {
