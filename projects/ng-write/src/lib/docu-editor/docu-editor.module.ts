@@ -11,24 +11,21 @@ import { ImageDialogComponent } from './components/image-dialog/image-dialog.com
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    MaterialModule,
-    SharedModule,
-    DragDropModule
-  ],
-  declarations: [
-    components
-  ],
-  providers: [
-    services
-  ],
-  exports: [
-    components
-  ],
-  entryComponents: [
-    ImageDialogComponent
-  ]
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        MaterialModule,
+        SharedModule,
+        DragDropModule
+    ],
+    declarations: [
+        components
+    ],
+    providers: [
+        services
+    ],
+    exports: [
+        components
+    ]
 })
 export class DocuEditorModule {}
