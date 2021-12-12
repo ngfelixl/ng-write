@@ -22,7 +22,6 @@ import { DynamicFormsService } from '../services/dynamic-forms.service';
       </mat-tab-group>
     </div>
   `,
-  styles: [``],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TabsFormComponent implements OnInit {

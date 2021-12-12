@@ -11,7 +11,6 @@ import { ImagesService } from '../../services/images.service';
       <docu-documentation-form [form]="form" [documentation]="documentation"></docu-documentation-form>
     </form>
   `,
-  styles: [``],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EditorComponent implements OnInit {
